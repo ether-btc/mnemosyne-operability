@@ -55,14 +55,27 @@ def load_bekko_model(model_path: str, device: str = "cpu"):
     
     # Load weights
     state_dict = load_file(str(weights_path))
-    backbone.load_state_dict(state_dict, strict=True)
     
-    # Create tokenizer (use a default one since it's not in the export)
-    # The tokenizer is not critical for inference if we're just doing predictions
-    # We'll create a simple one from the config
+    # Strip prefixes from state dict keys
+    # The saved model has keys like "encoder.backbone.xxx" and "heads.xxx"
+    # We need just the backbone keys for ModernBertModel
+    backbone_state_dict = {}
+    for key, value in state_dict.items():
+        if key.startswith("encoder.backbone."):
+            new_key = key[len("encoder.backbone."):]
+            backbone_state_dict[new_key] = value
+        elif not key.startswith("heads."):
+            backbone_state_dict[key] = value
+    
+    backbone.load_state_dict(backbone_state_dict, strict=True)
+    
+    # Load tokenizer from local directory
+    tokenizer_path = model_path / "0_BekkoInference" / "tokenizer"
+    if not tokenizer_path.exists():
+        raise FileNotFoundError(f"tokenizer not found at {tokenizer_path}")
     tokenizer = AutoTokenizer.from_pretrained(
-        "cross-encoder/ettin-reranker-17m-v1",
-        local_files_only=False,
+        str(tokenizer_path),
+        local_files_only=True,
     )
     
     # Import BekkoInference and BekkoSentenceTransformer
