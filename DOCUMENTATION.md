@@ -339,3 +339,37 @@ The Mnemosyne Operability study is **complete**:
 5. **Container deployment:** Blocked on model export format (known issue)
 
 The study found no evidence of avoidable reminders in September 2026 session data. The Bekko 17M model can classify agent actions from just 27 examples. The diagnostics module will catch silent failures automatically.
+
+## Container Deployment - Troubleshooting
+
+### Issue: Build fails with "no space left on device"
+
+**Root cause:** Podman images accumulated over time (114.8GB reclaimable).
+
+**Resolution:**
+```bash
+# Stop and remove all containers
+podman stop -a -t 1
+podman rm -a -f
+
+# Remove all unused images
+podman image prune -a -f
+
+# Remove build cache
+podman builder prune -a -f
+```
+
+**Prevention:** Regular `podman system df` checks and cleanup.
+
+### Issue: Build times out at 420s
+
+**Root cause:** Slow network downloading ~200MB of packages (torch, scipy, scikit-learn).
+
+**Resolution:** Run build in background with `notify_on_complete=true`.
+
+### Issue: "Incomplete portable checkpoint"
+
+**Root cause:** Bekko export_v0.py produces nested directory structure (0_BekkoInference/) that SentenceTransformer cannot load directly.
+
+**Resolution:** Custom loader script (`scripts/load-bekko.py`) that constructs the model from available files.
+
