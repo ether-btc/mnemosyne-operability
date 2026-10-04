@@ -1,0 +1,371 @@
+[0;93m2026-10-03 22:04:40.608197954 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card1": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+[0;93m2026-10-03 22:04:40.608277991 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card0": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+VERDICT: NO-GO-WITH-CONDITIONS
+
+VERDICT SUMMARY
+
+The plan has the right direction: measurement before implementation, explicit no-build outcome, no live prefetch manipulation, upstream preservation, and separate authorization for implementation. It is not yet a trustworthy executable evaluation plan. R0 can currently produce a retrospective, failure-enriched corpus without a stable opportunity denominator; R3/R4 do not prevent intervention-selection leakage into the held-out set; and the label, search-coverage, privacy-lifecycle, adversarial-input, and independent-gate rules remain underspecified. Following the plan would probably avoid immediate live-system harm, but it could still manufacture an apparent improvement or mishandle private historical material. Correct the conditions below and submit the changed exact bytes for a fresh independent review before opening broader session history or beginning R0.
+
+SCOPE
+
+Reviewer/run:
+  Reviewer — independent local plan review against the supplied hash set.
+
+Decision supported:
+  Whether the plan is sufficiently faithful, safe, measurable, and usable to proceed into R0 and eventually support a build/no-build decision.
+
+Target:
+  /home/hermes-pi/projects/mnemosyne-operability/
+
+Repository state:
+  Ordinary directory; confirmed no .git directory. No Git history or external-source truth was assumed.
+
+Exact reviewed files:
+  d364b5a8eab62f0fefb796492fbefd6fd1971486d7f17ee42808f1a39d917adf  README.md
+  e16ccfc4ae3f63b559ec731c6b0700ebdd68d748e21844ebc54b23dc6dc5ddf8  PRAXIS.md
+  58defdbd8dd8ef71422471bc4d95edd5bb4b090a489dbe4ef2a3a6b2c1662a37  METHODOLOGY.md
+  a4e0492de4a4cdddd7c5bb2dc0ada55a4052a6049863a89bbae25006cf492492  ROADMAP.md
+  e04b1a6fd8151c24cea3aaf20f1bfe444972d94b8a47ce4e8a46f36118d284ea  DECISIONS.md
+  e2ee5e0bbb476b5dd01fd332bdb2cd38cef2de3e797f7ff3ca5d49e9d26a1dbc  STATUS.md
+  ead1453784a41ae5729e531bd159842f30a62dc1926944d790dd3dfe3bacbadd  SOURCES.md
+  cb8cbbfd21897e65f3e85fc0f8d57b714f195aa6bd0621a9ea04122acce56bbb  EXECUTION-PROMPT.md
+  c8d251f417dd975daadf75d982e751a3c70df61eb471dabe05d18f18367e6852  scripts/verify.sh
+
+The hashes were independently recomputed and matched before and after inspection.
+
+Excluded:
+  REVIEW-PROMPT.txt and REVIEW-RESULT.txt were not part of the supplied hash-bound scope and were not used as evidence.
+
+Local citation checks:
+  Read the three cited wiki records, the cited prefetch artifact metadata, and the cited Mercury skill. No service, database, external endpoint, installation command, or live runtime was accessed.
+
+Inspection status:
+  COMPLETE for the nine exact local artifacts and their material local citations.
+  External candidate repositories and web/model claims were UNRUN by design because external access was explicitly prohibited. Those claims remain qualified discovery evidence, not accepted source truth.
+
+TOP CRITICAL FINDINGS
+
+1. MAJOR — “Avoidable reminder” and its denominator are not operational enough
+
+Location:
+  PRAXIS.md, “Candidate failure stages,” line 24
+  PRAXIS.md, “Definition of success,” line 44
+  METHODOLOGY.md, “Question,” line 4
+  METHODOLOGY.md, “Corpus protocol,” lines 15–19
+  METHODOLOGY.md, “Baseline and evaluation,” lines 22–24
+  ROADMAP.md, R0–R1, lines 9–10
+
+Observed fact:
+  A reminder counts when it supplies a capability or policy the agent “could reasonably have retrieved and used.” The proposed source set preferentially starts from incident, omission, and reminder records, while the primary outcome is the rate of avoidable omissions/reminders “among eligible cases.”
+
+Reviewer judgment:
+  “Reasonably,” “available,” “relevant,” and “correct use” lack a decision rule tied to what was accessible before the agent acted. A corpus assembled primarily from remembered incidents also lacks a denominator of capability opportunities or ordinary non-reminder tasks. It can estimate the composition of selected incidents, but not the rate at which reminders occur or improve.
+
+Concrete consequence:
+  A corpus containing mostly failures can make baseline failure prevalence appear high and make a tailored intervention look effective without demonstrating fewer reminders across eligible work.
+
+Minimal correction:
+  Before collecting cases, define:
+  - the unit of analysis as a capability opportunity, not merely a reported reminder;
+  - a bounded sampling frame and observation window;
+  - inclusion of eligible non-reminder/control opportunities;
+  - temporal availability and access at the original turn;
+  - the pre-action evidence that should have triggered retrieval;
+  - policy/permission eligibility and a reference expected action;
+  - explicit exclusion of preference changes, new facts, hindsight-only knowledge, and ambiguous counterfactuals.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Problem/acceptance fit; R0 and R1.
+
+Verification required:
+  Independent application of the codebook to examples and inversion cases, including at least one valid reminder, one new-information correction, one capability that existed but was not reasonably discoverable, and one correctly handled non-reminder task.
+
+Gate remains blocked:
+  Yes.
+
+2. MAJOR — Held-out separation does not prevent selection-metric leakage
+
+Location:
+  METHODOLOGY.md, “Baseline and evaluation,” lines 23 and 26
+  ROADMAP.md, R3–R4, lines 12–13
+  PRAXIS.md, “Definition of success,” line 44
+
+Observed fact:
+  The plan calls for a held-out set and freezes thresholds before treatment comparison, but R1 and R2 expose the baseline cases and candidate mechanisms before R3 chooses the intervention and evaluation set. It does not prohibit the intervention designer from inspecting all eventual held-out cases.
+
+Reviewer judgment:
+  Freezing task text “before seeing results” is not the same as hiding evaluation cases before hypothesis and intervention selection.
+
+Concrete consequence:
+  A selector or routing rule can be tuned to the exact examples and labels later described as held out. The paired comparison may then measure memorization of case features rather than generalization.
+
+Minimal correction:
+  Freeze and hash distinct discovery/development and evaluation manifests before candidate design. Permit threshold derivation only from the development portion. Keep held-out case text and labels unavailable to the intervention designer until the candidate, estimator, thresholds, guardrail tolerances, and kill rule are locked. Any redesign after opening held-out results starts a new evaluation set.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Evaluation validity; R3 and R4.
+
+Verification required:
+  A manifest showing non-overlapping case IDs, freeze time, content hashes, roles allowed to inspect each partition, and a preregistration created before held-out access.
+
+Gate remains blocked:
+  Yes.
+
+3. MAJOR — Search coverage, label agreement, and analysis reproducibility can still fail open
+
+Location:
+  METHODOLOGY.md, “Corpus protocol,” lines 14 and 18
+  METHODOLOGY.md, “Baseline and evaluation,” lines 22–26
+  ROADMAP.md, R0–R1, lines 9–10
+
+Observed fact:
+  The plan correctly says that zero matches with sessions_searched: 0 proves no negative finding. It says two reviewers label cases “where possible,” but sets no minimum agreement rule, blinded procedure, agreement statistic, adjudicator independence, or mandatory inconclusive outcome. It also does not define how search coverage will be proved.
+
+Concrete consequence:
+  R0 could declare coverage after another empty or mis-scoped search, while R1 could report performance from one reviewer’s retrospective labels or silently exclude difficult disagreements. Thresholds chosen after inspecting prevalence can also be tuned without a prespecified estimator or uncertainty rule.
+
+Minimal correction:
+  Require:
+  - a known-positive session-search canary;
+  - recorded profile/index scope, date range, query, sessions searched, expected match, and observed result;
+  - an environment-limited outcome if coverage cannot be demonstrated;
+  - two independent, initially blinded labels for every case entering metrics, or an explicit inconclusive result;
+  - reported raw agreement and disagreement counts, a named adjudication rule, and ambiguous-case denominators;
+  - a preregistered estimator, uncertainty interval, missing/exclusion handling, and guardrail non-inferiority rule.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Evidence access, reproducibility, and R0/R1 acceptance.
+
+Verification required:
+  A known-positive search result plus a small double-labelled pilot demonstrating that the codebook is reproducible.
+
+Gate remains blocked:
+  Yes.
+
+4. MAJOR — Privacy direction is good, but retention/access and adversarial-input controls are absent
+
+Location:
+  METHODOLOGY.md, “Corpus protocol,” lines 15–18
+  METHODOLOGY.md, “Baseline and evaluation,” line 27
+  EXECUTION-PROMPT.md, “Non-negotiable gates,” lines 33–37
+  DECISIONS.md, D-002 and D-006, lines 6 and 10
+
+Observed fact:
+  The plan requires minimization, local/uncommitted storage, redaction, approved endpoints, and no raw archive ingestion. It correctly rejects the inversion that pre-call assembly keeps provider-bound context local. It does not define storage location, filesystem permissions, authorized readers, backup/sync exclusion, retention period, deletion verification, or handling of source pointers. It also does not classify session/repository text as untrusted instructions.
+
+Concrete consequence:
+  Scrubbed cases or source pointers may persist indefinitely, become readable outside the intended reviewer set, enter backups, or be transmitted under an inadequately defined “scrubbed” standard. Replayed historical text can contain prompt injection that changes evaluator behavior or induces tool use, invalidating both safety and measurement.
+
+Minimal correction:
+  Add an R0 privacy and adversarial-data contract covering:
+  - exact storage location and restrictive permissions;
+  - authorized roles;
+  - backup/sync exclusion;
+  - retention and verified deletion;
+  - fields forbidden from source pointers and outputs;
+  - endpoint-specific retention/training terms before any external replay;
+  - inert quoting/delimiting of untrusted case content;
+  - no tools, network, filesystem mutation, or live credentials in replay;
+  - prompt-injection outcomes reported separately as a guardrail.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Safety/privacy; R0 and any future R4 replay.
+
+Verification required:
+  Inspect the corpus directory permissions and manifest without exposing case contents; execute an isolated adversarial control case before any real replay.
+
+Gate remains blocked:
+  Yes.
+
+5. MAJOR — Independent review is strongly stated but not closed mechanically
+
+Location:
+  ROADMAP.md, “Current position,” line 28
+  EXECUTION-PROMPT.md, “Non-negotiable gates,” line 36
+  EXECUTION-PROMPT.md, “Work sequence,” lines 44–46
+  EXECUTION-PROMPT.md, “Progress discipline,” line 49
+  scripts/verify.sh, lines 12–18
+
+Observed fact:
+  The plan requires GO before subsequent work and separately gates implementation authorization. Those are good controls. However, the continuation prompt says a corrected plan is re-reviewed “if the reviewer requires it” and lets the integrator “accept/refute” findings. The verifier checks only that text saying review is pending exists; it does not verify a hash-bound GO or unresolved findings.
+
+Concrete consequence:
+  An integrator can modify a reviewed source or contract, self-refute a finding, retain or alter a marker, and continue without a fresh independent verdict on the resulting bytes.
+
+Minimal correction:
+  State that every change to a plan, methodology, acceptance contract, control script, or continuation prompt invalidates the previous verdict. Require an independently produced, exact-hash-bound VERDICT: GO and independent closure of every MAJOR/BLOCKER before R0 or R4, as applicable. Self-disposition may propose a response but cannot close the independent gate. Later implementation authorization must remain separate.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Independent review and authorization boundaries.
+
+Verification required:
+  Read back the reviewer artifact, compare every reviewed hash, verify the exact verdict token, and confirm no unresolved blocking finding.
+
+Gate remains blocked:
+  Yes.
+
+MEDIUM ISSUES
+
+6. MINOR — Evidence ledger contains one unexplained measurement conflict and unpinned claims
+
+Location:
+  PRAXIS.md, “Evidence so far,” line 8
+  STATUS.md, “Verified initial evidence,” line 12
+  SOURCES.md, lines 10–11 and 16–24
+
+Observed fact:
+  PRAXIS and STATUS claim a 12,524-character prefetch. The cited local artifact contains 10,999 characters including its final newline and 10,998 after stripping that newline, matching SOURCES.md. No local citation explains 12,524. The session-search, doctor, RepoHunt, Mercury, and candidate-source outputs are not preserved as immutable local artifacts; candidate URLs use mutable main/master paths.
+
+Positive verification:
+  The September 27 closeout does explicitly record 40 tools, 73 memory injections, and zero load failures at lines 55–58. The October 1 update confirms the managed-venv install and distinct dev checkout at lines 18–27. These are correctly treated as historical rather than current invariants.
+
+Concrete consequence:
+  Repeated summaries can drift, and later reviewers cannot reproduce exact candidate-source wording or determine which prefetch measurement is meant.
+
+Minimal correction:
+  Use one evidence ledger containing claim, observation date, exact local path, line range, content hash, and measurement definition. Correct or explain 12,524. Preserve local outputs for session-search and consultations, and pin external sources by commit plus content hash before relying on their wording.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Evidence integrity.
+
+Gate remains blocked:
+  No, not independently; it must be corrected as part of the revised artifact.
+
+7. MINOR — The verifier is transparent but phase-stale and not runnable as documented
+
+Location:
+  README.md, “Resume,” line 10
+  EXECUTION-PROMPT.md, lines 14 and 52
+  scripts/verify.sh, lines 12–19
+
+Observed fact:
+  Running bash scripts/verify.sh succeeded and reported:
+    PASS: 8 required project files present; scope, method, risk-first task, pending-review gate, and resume contract markers verified.
+    LIMIT: structural markers only; does not validate research claims, privacy, plan quality, or review approval.
+
+  The LIMIT is accurate. Nevertheless:
+  - the file mode is 0644, and the documented direct command ./scripts/verify.sh failed with exit 126, “Permission denied”;
+  - the script permanently requires “independent plan review is pending” and “First uncompleted task: R0,” so honest progression to GO or R1 makes it fail;
+  - “scope, method … verified” overstates literal substring presence;
+  - it checks neither reviewed hashes nor contradictory text.
+
+Concrete consequence:
+  A fresh session may be blocked by the command itself, keep stale status merely to preserve PASS, or over-credit a marker scan as semantic validation.
+
+Minimal correction:
+  Document bash scripts/verify.sh or make it executable; describe the result as “required markers found”; make expected phase/next-task state explicit and phase-aware; add exact hash-manifest comparison without claiming semantic validation.
+
+Disposition:
+  REJECT.
+
+Affected gate:
+  Control-script usability and status integrity.
+
+Gate remains blocked:
+  No, provided nobody treats its PASS as plan approval.
+
+DIMENSION ASSESSMENT
+
+Problem/acceptance fit:
+  NO-GO. “No build” is explicitly and correctly valid, but “avoidable reminder” and its denominator are not yet reproducible enough.
+
+Evidence integrity:
+  PARTIAL. Core local historical claims and date qualifications checked out. The prefetch-size conflict and unpreserved/mutable evidence need correction. Candidate-repository claims are correctly study-only, but were not independently re-fetched.
+
+Evaluation usefulness:
+  NO-GO. R0 is the right first milestone, but its current acceptance criteria permit biased ascertainment, weak coverage proof, optional double-labelling, and held-out leakage.
+
+Safety/privacy:
+  PARTIAL. Live runtime, provider transmission, prefetch, and implementation gates are strong. Retention, access, backup, deletion, and adversarial replay controls are missing.
+
+Roadmap/dependencies:
+  PARTIAL. R0 is highest-risk-first and every task names an observable artifact. R4–R6 are appropriately conditional, and implementation requires both review and later authorization. The R0/R1 done criteria and review-closure mechanics need tightening.
+
+Continuation prompt:
+  PARTIAL/PASS WITH REQUIRED UPDATE. It names the role, objective, project root, current state, next task, closed consultations, rejected claims, hard gates, and bad session-search inference. It is generally self-contained. It does not identify an immutable review-result path/hash and, after this verdict, its “pending review → then R0” resume state must become “NO-GO corrections pending,” followed by exact-tree re-review.
+
+Control script:
+  LIMITED ONLY. It proves eight named files are non-empty and six literal strings exist. It does not prove truth, consistency, privacy, methodology quality, review approval, executable permissions, current phase, or unchanged reviewed bytes.
+
+Complexity:
+  The core PRAXIS/METHODOLOGY/ROADMAP separation is defensible. Duplication across STATUS, README, SOURCES, and EXECUTION-PROMPT already caused the prefetch-size drift. Keep evidence details in SOURCES and decisions in DECISIONS; let STATUS and the continuation prompt reference them rather than repeat figures. Volatile star/commit counts, Mercury steering details, and Tavily/doctor status can be removed from the continuation prompt without losing any user requirement.
+
+FAILURE-MODE AND INVERSION CHECKS
+
+1. Selection-metric leakage:
+  FAILED. Nothing prevents intervention design after inspecting all eventual held-out cases.
+
+2. Biased retrospective corpus:
+  FAILED. “Wiki records first” plus no opportunity denominator can enrich the corpus for memorable failures.
+
+3. Expanding context and sending private memory to providers:
+  PARTIALLY DEFENDED. The plan correctly rejects full injection and recognizes provider disclosure. Missing retention terms and adversarial replay isolation remain second-order risks.
+
+4. Reviewer/self-enforcer skipped:
+  FAILED AS A MECHANICAL CONTROL. Strong prose exists, but changed bytes and self-refuted findings are not unconditionally forced through a new independent GO.
+
+5. Empty session search treated as no records:
+  PASSED AS A CLAIM INVERSION. The plan repeatedly states that sessions_searched: 0 proves no negative. R0 still needs a known-positive coverage test to make that rule operational.
+
+6. Adversarial case text:
+  FAILED. No rule makes prior prompts, wiki text, or repository content inert untrusted data during replay.
+
+7. Reversibility:
+  PARTIAL. R5/R6 require rollback and preserve upstream updateability. External disclosure is irreversible, and corpus retention/deletion is not yet specified.
+
+VERIFICATION ACTUALLY RUN
+
+- Recomputed all nine SHA-256 file-content digests; every digest matched the supplied value.
+- Recomputed the same hashes after inspection; they remained unchanged.
+- Confirmed the target has no .git directory.
+- Read all nine reviewed artifacts completely.
+- Read the three cited local wiki records and the cited local Mercury skill.
+- Counted the cited prefetch artifact without printing its private contents:
+    11,009 bytes
+    10,999 Unicode characters including final newline
+    10,998 characters after stripping the final newline
+    SHA-256 df4b397abb1ac69613e354e33848fc4deb32c84fa237803b335ba7624d4b4df2
+- Ran bash scripts/verify.sh and observed its PASS and LIMIT output.
+- Ran the documented direct form ./scripts/verify.sh and observed exit 126, Permission denied.
+- Did not access session databases, services, live configuration, external endpoints, or candidate repositories.
+- Did not edit any file or create any project artifact.
+
+CONDITIONS FOR A FUTURE GO
+
+1. Add an operational case codebook and bounded sampling frame with an opportunity denominator and non-reminder controls.
+2. Freeze separate development and sealed held-out manifests before intervention design.
+3. Specify a known-positive session-search coverage test, mandatory scored-case double-labelling or inconclusive disposition, agreement/adjudication rules, and a preregistered analysis rule.
+4. Add retention, access, backup, deletion, provider, and adversarial-input controls before opening broader history.
+5. Make independent review closure exact-hash-bound and mandatory after every plan/contract/script change; self-disposition cannot close blocking findings.
+6. Reconcile the prefetch measurement, pin evidence artifacts, and make the verifier phase-aware and accurately described.
+7. Obtain a fresh independent verdict over the resulting exact hashes.
+
+SINGLE SMALLEST SAFE NEXT STEP
+
+Do not begin corpus collection. In a separate authorized editing pass, add one R0 protocol section defining the capability-opportunity unit, bounded sampling frame/denominator, sealed holdout split, known-positive coverage test, label/adjudication rules, and privacy lifecycle; then submit the complete changed hash set for fresh independent review.
+
+RESIDUAL RISK
+
+External candidate documentation, RepoHunt snapshots, session-search output, Mercury output, and doctor timeout were not independently reproduced because the review prohibited external and database/service access. They must remain non-load-bearing until preserved and verified. No conclusion was reached about the actual frequency or dominant cause of avoidable reminders.
+
+AUTHORIZATION BOUNDARY
+
+This verdict does not authorize R0 corpus collection, broader session-history access, implementation, configuration changes, model/provider replay, installation, commit, publication, service action, database access, or deployment. It authorizes nothing beyond preparing a corrected plan for another exact-tree review.

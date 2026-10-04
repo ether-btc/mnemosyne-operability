@@ -1,0 +1,29 @@
+Successfully read all 13 requested files:
+
+- `/home/hermes-pi/projects/mnemosyne-operability/README.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/CODEBOOK.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/ROADMAP.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/DECISIONS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/STATUS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/SOURCES.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/EXECUTION-PROMPT.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/verify.sh`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/search/session-search-output-contract-2026-10-04.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/local-tool-checks-2026-10-04.md`
+
+Findings:
+
+- MAJOR — `/home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md:15` — The R0b instructions suppress the `hermes_state` logger and say to capture/discard subprocess output, but don’t establish that *all* output channels are contained. The source evidence verifies query logging and caller-visible field projection, not that libraries, warnings, or other loggers can never emit matched text. The synthetic sentinel test is a good fail-closed check, but its specified assertion covers stdout/stderr rather than proving that every output sink is private. Smallest correction: make the local process’s output boundary explicit (including logging/warnings and any inherited descriptors), require the actual sentinel test to exercise that boundary, and stop as INCOMPLETE if it cannot be verified. The proposed lower-level projection is source-supported; its live behavior remains unverified because no DB/canary was run.
+
+- MINOR — `/home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md:20-26` — This lists five failure stages, while `CODEBOOK.md:12-20` and the three-stage reveal at `METHODOLOGY.md:22-25` label stages 1–3 and combine the later operational distinctions into fields. That may be intentional, but “stage” currently refers to two different things: failure classification and reveal order. Smallest correction: name these separately (e.g. “failure categories” versus “label-reveal stages”) and map the categories to the locked reveal stages.
+
+- MINOR — `/home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py:51-82, 148-212` — The regression tests cover contradictory/duplicate verdicts, malformed/duplicate-key gate records, raw-versus-receipt disagreement, unresolved findings, stale hashes, and manifest mismatch. They do not test a malformed-but-valid JSON gate record with wrong field types (for example, a string `unresolved_findings`) or invalid JSON in `review-state.json` with the expected fail-closed result. Smallest correction: add black-box cases for those malformed receipt/record shapes. Existing coverage is substantial; this is a narrow gap, not evidence the verifier currently accepts them.
+
+- LOW — `/home/hermes-pi/projects/mnemosyne-operability/README.md:7, 23-25` and `/home/hermes-pi/projects/mnemosyne-operability/STATUS.md:5-6, 27-30` — The status pointers are consistent that round 2 is NO-GO and R0 is blocked, and the Roadmap is the phase source of truth. However, README says corrections are “in progress,” while STATUS says to finish corrections and then submit review; the current files also contain future R0/R1 procedures in detail. This is not a phase-graph contradiction, but it leaves the immediate G0 completion state a little ambiguous. Smallest correction: make README’s status line match STATUS’s precise “G0 corrections in progress; no R0 authorized” wording. Actual completion of G0 and its checks is unknown from this read-only review.
+
+Verified/unknown boundaries: The documented `fields=["id","session_id"]` design avoids the content-bearing `session_search` wrapper and is consistent with the pinned source evidence. The managed-runtime path is documented as a direct import-only check that avoided bootstrap/update. Neither the live read-only DB behavior nor canary output suppression has been exercised here. Reader/labeler isolation is specified as a hard stop condition, but its real-world availability is not established by these files. Current external/provider egress, backup exclusions, and live configuration were not inspected, as instructed. No verifier or test commands were run in this read-only follow-up.
+
+BLOCKED

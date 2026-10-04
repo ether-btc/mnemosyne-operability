@@ -1,0 +1,74 @@
+[
+  {
+    "message_id": 202307,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check existing profiles/skills before deciding. Correct approach."
+  },
+  {
+    "message_id": 202407,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Test message requiring exact reply. No tool needed. Correct response."
+  },
+  {
+    "message_id": 202429,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Test message requiring exact reply. No tool needed. Correct response."
+  },
+  {
+    "message_id": 203167,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(prompro) for cron job. Correct."
+  },
+  {
+    "message_id": 203621,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used tool_describe to check process_manage. Correct approach."
+  },
+  {
+    "message_id": 205168,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check praxis state. Correct for skill invocation."
+  },
+  {
+    "message_id": 205174,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to run upstream-diff.sh. Correct for skill invocation."
+  },
+  {
+    "message_id": 205418,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(betterask-hermes) for job application question. Correct."
+  }
+]

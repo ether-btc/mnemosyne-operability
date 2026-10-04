@@ -1,0 +1,19 @@
+Successfully read:
+- /home/hermes-pi/projects/mnemosyne-operability/README.md
+- /home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md
+- /home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md
+- /home/hermes-pi/projects/mnemosyne-operability/CODEBOOK.md
+- /home/hermes-pi/projects/mnemosyne-operability/ROADMAP.md
+- /home/hermes-pi/projects/mnemosyne-operability/DECISIONS.md
+- /home/hermes-pi/projects/mnemosyne-operability/STATUS.md
+- /home/hermes-pi/projects/mnemosyne-operability/SOURCES.md
+- /home/hermes-pi/projects/mnemosyne-operability/EXECUTION-PROMPT.md
+- /home/hermes-pi/projects/mnemosyne-operability/scripts/verify.sh
+- /home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py
+- /home/hermes-pi/projects/mnemosyne-operability/evidence/search/session-search-output-contract-2026-10-04.md
+- /home/hermes-pi/projects/mnemosyne-operability/evidence/quality/local-tool-checks-2026-10-04.md
+
+BLOCKERS: none
+MAJORS: none
+MINORS: none
+CLEAR

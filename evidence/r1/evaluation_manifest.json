@@ -1,0 +1,80 @@
+{
+  "partition": "evaluation",
+  "split_method": "time_separated",
+  "split_ratio": 0.2,
+  "session_count": 12,
+  "sessions": [
+    {
+      "id": "20260907_165212_c45933",
+      "started_at": 1788792732.494999,
+      "ended_at": 1788793172.298547,
+      "message_count": 43
+    },
+    {
+      "id": "20260907_191403_a09b4b55",
+      "started_at": 1788801243.6248014,
+      "ended_at": null,
+      "message_count": 54
+    },
+    {
+      "id": "cron_3586375ae7ce_20260907_194620",
+      "started_at": 1788803247.7274117,
+      "ended_at": 1788803321.5279286,
+      "message_count": 32
+    },
+    {
+      "id": "20260908_012459_3fffb3",
+      "started_at": 1788823499.3724322,
+      "ended_at": 1788823509.2788038,
+      "message_count": 1
+    },
+    {
+      "id": "20260908_025545_fd1b0813",
+      "started_at": 1788828945.2256293,
+      "ended_at": null,
+      "message_count": 44
+    },
+    {
+      "id": "20260908_112714_f4bfd8",
+      "started_at": 1788859634.2845242,
+      "ended_at": 1788859644.128793,
+      "message_count": 1
+    },
+    {
+      "id": "20260908_113712_be03e5",
+      "started_at": 1788860234.676679,
+      "ended_at": 1788860246.55323,
+      "message_count": 1
+    },
+    {
+      "id": "20260908_145311_0e9e6681",
+      "started_at": 1788871991.2026672,
+      "ended_at": null,
+      "message_count": 52
+    },
+    {
+      "id": "20260908_204619_c6e1e35b",
+      "started_at": 1788893179.1853461,
+      "ended_at": null,
+      "message_count": 23
+    },
+    {
+      "id": "20260908_205403_1d98aef6",
+      "started_at": 1788893643.1353664,
+      "ended_at": null,
+      "message_count": 29
+    },
+    {
+      "id": "20260908_205524_95c5ae",
+      "started_at": 1788893726.181362,
+      "ended_at": 1788893737.2595184,
+      "message_count": 1
+    },
+    {
+      "id": "20260908_215448_0ee010",
+      "started_at": 1788897289.9174006,
+      "ended_at": 1788897300.738819,
+      "message_count": 1
+    }
+  ]
+}

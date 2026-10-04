@@ -1,0 +1,37 @@
+[
+  {
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12496,
+    "agent_action": "unknown",
+    "task_outcome": "unknown",
+    "rationale": "The case involves the discovery of AI agent capabilities, which aligns with the task of labeling cases for a research study on AI agent capability discovery."
+  },
+  {
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57212,
+    "agent_action": "unknown",
+    "task_outcome": "unknown",
+    "rationale": "The user is starting by grounding themselves in various AI tools and configurations, which is an actionable task requiring a named tool/skill/memory/wiki."
+  },
+  {
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86100,
+    "agent_action": "unknown",
+    "task_outcome": "unknown",
+    "rationale": "The task involves loading an audit skill and pulling ground truth, which requires specific tools or skills to perform the operation accurately."
+  },
+  {
+    "session_id": "20260825_131537_152c3a",
+    "message_id": 104091,
+    "agent_action": "unknown",
+    "task_outcome": "unknown",
+    "rationale": "The case involves identifying the capabilities of AI agents, which aligns with the task of discovering AI agent capabilities."
+  },
+  {
+    "session_id": "20260826_144147_6c2a3c",
+    "message_id": 115590,
+    "agent_action": "unknown",
+    "task_outcome": "unknown",
+    "rationale": "The task involves designing a prompt, which is a named tool/skill."
+  }
+]

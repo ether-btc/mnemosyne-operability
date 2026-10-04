@@ -1,0 +1,23 @@
+[
+  {
+    "eligible": true,
+    "expected_capability": "codebase-comprehension",
+    "rationale": "The assistant used the 'codebase-comprehension' capability to understand the user request and respond appropriately.",
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12496
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant used the 'terminal' tool to execute commands, which is a correct capability for the task.",
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57212
+  },
+  {
+    "eligible": true,
+    "expected_capability": "skill_view",
+    "rationale": "The assistant used the 'skill_view' function to verify the operator's claims against the live fleet state, which is a correct and appropriate use of the capability.",
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86100
+  }
+]

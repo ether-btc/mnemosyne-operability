@@ -1,0 +1,180 @@
+[0;93m2026-10-04 13:20:57.492500673 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card1": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+[0;93m2026-10-04 13:20:57.492582544 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card0": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+VERDICT: GO
+
+REVIEW IDENTITY AND SCOPE
+
+Reviewer: Reviewer, independent read-only round-3 review.
+
+Decision supported: whether the exact G0 candidate is sufficiently coherent, safe, usable, and measurable to complete G1 and become eligible for a separately authorized R0a metadata/privacy preflight.
+
+Target: /home/hermes-pi/projects/mnemosyne-operability/
+
+The project is documented as non-Git-backed; this verdict is therefore bound to the 18 file-content SHA-256 digests below, not to a Git branch or object ID.
+
+No project file was edited or created. No session text, session database, live service/configuration, credentials, candidate repository, or web content was accessed. One attempted browser fallback for the permitted local METHODOLOGY.md file failed before navigation because no CDP endpoint was available; it supplied no evidence and was discarded.
+
+EXACT-TREE VERIFICATION
+
+All 18 hashes matched the values supplied in the review request both before inspection and after all permitted checks:
+
+  55b728b566f334556318ef264f57378129a8f4abcbe73271204380f4dcf5580f  README.md
+  67ab34065ca1d37a0ad14f4e925c4026481f311167518a5cf893fa4ece9639b3  PRAXIS.md
+  e5a5a9487fe00bfd005b21a60be02658b579735f68ea3cb38ee47115a120df31  METHODOLOGY.md
+  557d5cabfb5997ccca98d0180e7956e09acea96618b6618646d488e9cb1e027a  CODEBOOK.md
+  7981c0fe831f69e6375eb54d22db45106c5bbb323dd4905976d63fcfbcef099e  ROADMAP.md
+  aa9dcad7f2c8fd14a2985597335a1b4db53b3067b3c26d178cbdb43db1e9e260  DECISIONS.md
+  92423749762260c4f536aa3f4bb17eaff82eb42e5458991559d1ab1e7a219c56  STATUS.md
+  8fc4f672c9a967d6fd94571e153caef3b008467b9ed8b297ede4b5a2b62823ab  SOURCES.md
+  3344469e61c8a9e5c433b1c40b616a8a5d0ec10ce18d84e9da781227bdd4a572  EXECUTION-PROMPT.md
+  cadb8f3bf16f2903b66c5328e346727b273d3c417b409c50372252fe9b3b20e5  scripts/verify.sh
+  f3f931feef725a81a003ebae9d845ae65237daa0dcbea96e0bf02ac113a4e36b  scripts/test_verify.py
+  c3d2083bffdd4ea26009bac0bdfd1dae07e3675506dede189adf53e18ba18b9e  evidence/search/session-search-output-contract-2026-10-04.md
+  cdad78ec6b16898737c573c0925ad3c8abb13d6f9a5b8953574d7cbb53f4e129  evidence/quality/local-tool-checks-2026-10-04.md
+  4c44fe9e3ba4f25cea31fa939cfc7b7057ade526fae0ca91774893ba39b432c5  evidence/quality/bot-g0-v2-vibe-prompt.txt
+  99353188d3bedf267c8db16de521803cf82e27f0c1c11b1c345600c4027bbea3  evidence/quality/bot-g0-v2-vibe-review.txt
+  ddfd10cb7288f460ce8a7fb2757803612ba23dca50014c251408a0258fbe69f4  evidence/quality/bot-g0-v2-cofounder-prompt.txt
+  a9520f78ceb36c6a81f02cb98f7dad19ad005fd3e21224bc10c537da73f8d9e8  evidence/quality/bot-g0-v2-cofounder-review.txt
+  17486bc4d444b56b9c452d14d71b0b88a95c7a0fb7f8fb4f49d1d98fa42eee62  evidence/quality/ocr-round3-g0-v2.md
+
+The candidate-manifest file itself was outside the permitted 18-file read set; the recomputed hashes were compared directly with the identical manifest rows supplied in the review request.
+
+The preserved round-2 result was used and independently matched:
+
+  2f0178e371ddb94ee81e3923bc23259ab9076a79bea5332551f9875f1a2f8045  evidence/reviews/round-2/REVIEW-RESULT.txt
+
+FILES READ
+
+All 18 reviewed files listed above were read, together with the permitted round-2 raw result. The unusually long R0b paragraph at METHODOLOGY.md:15 was inspected through the file reader plus targeted content searches after the initial display truncated that physical line.
+
+CURRENT FINDINGS
+
+BLOCKERS
+
+None.
+
+MAJORS
+
+None.
+
+MINORS
+
+None.
+
+DISPOSITIONABLE LOW ISSUE
+
+R3-L1 — Historical disposition paraphrase does not quote the current README wording exactly.
+
+  Location: DECISIONS.md:65-74, especially line 72; compare README.md:6-9 and STATUS.md:5-6.
+  Observed behavior: D-012 says the README “now says ‘G0 corrections in progress; no R0 authorized.’” The current README instead says that G0 corrective changes are locally complete, fresh G1 review is pending, and no R0 is authorized. The latter agrees substantively with STATUS.md.
+  Severity: LOW.
+  Reproduction: SOURCE-REPRODUCED.
+  Affected gate: documentation provenance only; not privacy, measurement, phase ordering, or authorization.
+  Disposition: INFORMATIONAL / ACCEPT for this gate.
+  Consequence: the partner-finding history contains an inexact quotation, but the live status and authorization boundary are unambiguous.
+  Minimum correction: on a future reviewed documentation edit, change the D-012 action text to quote or accurately paraphrase the actual README status. Do not change the current exact tree merely for this issue.
+  Verification: compare the three cited lines after any future edit and obtain a fresh exact-tree review.
+  Gate blocked: No.
+
+ROUND-2 FINDING CLOSURE
+
+R2-M1 — Positive-control privacy path: CLOSED AS A DESIGN CONTRACT.
+
+  Evidence: METHODOLOGY.md:12-17 and 29-35; ROADMAP.md:13-15; EXECUTION-PROMPT.md:18-20; session-search-output-contract-2026-10-04.md:9-18.
+  The plan now separates R0a metadata/privacy preflight from R0b; uses the lower-level read-only SessionDB projection; keeps query and expected IDs out of argv/environment; captures stdout/stderr; closes inherited descriptors; forbids logging, persistence, forwarding, or embedding of raw output; allowlists the sole receipt; audits file/syslog/socket/network sinks; and fails INCOMPLETE on any unproven channel.
+  Runtime status remains explicitly UNRUN: no database, canary, wrapper, or sentinel fixture was exercised. That limitation is correctly stated rather than converted to proof.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-M2 — Missing assistant-answer label stage: CLOSED.
+
+  Evidence: METHODOLOGY.md:19-27 and CODEBOOK.md:8-26 define three locked stages: initial/pre-answer evidence, assistant answer/tool trace, and later user turns. Both label sets are locked before the next reveal.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-M3 — Phase/dependency mismatch: CLOSED.
+
+  Evidence: ROADMAP.md:7-24 is explicitly the sole phase/dependency source; its chain is G0 → G1 → R0a → R0b → R1 → R2, with source/metadata-only R3 permitted after G1 and R2 + R3 required before R4. EXECUTION-PROMPT.md:13-16 references ROADMAP rather than duplicating a competing numbered workflow. STATUS.md:5-6 and 27-30 accurately place the project at pending G1.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-M4 — Reader/labeler isolation: CLOSED AS A PRE-CONTENT CONTRACT.
+
+  Evidence: METHODOLOGY.md:29-35 and CODEBOOK.md:39-40 name the custodian, two independent labelers, and optional separate adjudicator; require a verified stage-specific read-only handoff; prohibit permission broadening; isolate any non-human labeler from tools, network, shell, credentials, and writes; require a synthetic injection test; and gate backup/sync exclusion, retention, and deletion verification.
+  Real-world labeler and handoff feasibility remains unverified and is correctly assigned to R0a.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-M5 — Contradictory or malformed verifier result: CLOSED FOR THE DECLARED STRUCTURAL GATE.
+
+  Evidence: scripts/verify.sh:107-170 requires exactly one raw GO line, one gate record with exactly the two permitted fields, unique gate-record JSON keys, agreement with the receipt, an empty findings list, exact prompt-manifest agreement, and exact coverage/hash matching for all 18 reviewed files. scripts/test_verify.py:95-251 exercises contradictory and duplicate verdicts, malformed and duplicate-key gate records, wrong field types, raw unresolved findings, invalid receipt JSON, stale files, tampering, incomplete coverage, path confinement, and CLI rejection.
+  The verifier still cannot authenticate reviewer identity or judgment and explicitly says so at verify.sh:99-102. It is not an authorization mechanism.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-m6 — Metric terminology: CLOSED.
+
+  Evidence: PRAXIS.md:36-37 and METHODOLOGY.md:3-10, 37-42 define the primary numerator as confirmed avoidable reminders and the denominator as all eligible opportunities in the fixed frame. Unprompted omissions, task correctness, and guardrails are separately reported.
+  Disposition: ACCEPT. Gate blocked: No.
+
+R2-m7 — Transcribed discovery records: CLOSED UNDER THE ROUND-2 ACCEPTANCE.
+
+  Evidence: SOURCES.md:5-13 and DECISIONS.md:30-31 continue to label the records as transcriptions and limit their use to “no demonstrated coverage.” Future load-bearing probes require bounded raw receipts.
+  Disposition: ACCEPT. Gate blocked: No.
+
+PARTNER-FINDING ASSESSMENT
+
+V-G0-M1, output-channel containment: substantively closed by METHODOLOGY.md:15, ROADMAP.md:14, and EXECUTION-PROMPT.md:19. The files correctly state that this is unexecuted design, not runtime evidence.
+
+V-G0-m1, category/reveal-stage terminology: closed by PRAXIS.md:20-27 and CODEBOOK.md:8-20. C1–C5 are failure categories; Stages 1–3 are evidence reveals.
+
+V-G0-m2, malformed field types and invalid receipt JSON: closed by test_verify.py:176-202 and 187-191, with the corresponding fail-closed checks in verify.sh.
+
+V-G0-l1, status wording: substantively closed because README.md:7 and STATUS.md:6 agree on locally complete G0 corrections, pending G1, and blocked R0. The inexact D-012 quotation is recorded as R3-L1 above.
+
+Technical Cofounder CLEAR: treated only as advisory corroboration; it did not determine this result.
+
+MEASUREMENT AND HOLDOUT ASSESSMENT
+
+The opportunity unit, eligibility timing, reminder definition, numerator, denominator, non-reminder controls, and exclusion/uncertainty rules are coherent across PRAXIS.md:15-27, METHODOLOGY.md:3-10 and 37-42, and CODEBOOK.md:5-27.
+
+The source frame is outcome-independent and frozen before content. R1 freezes whole-session/time development and evaluation manifests before opening case text; evaluation remains sealed until the hypothesis, candidate, estimator, thresholds, guardrails, and kill rule are fixed. A post-reveal redesign requires a new untouched partition. No reminder-query or FTS-hit sampling is permitted.
+
+VERIFICATION ACTUALLY RUN
+
+1. bash scripts/verify.sh
+   Exit 0.
+   Reported 21 required artifacts present and non-empty, matching round-2 prompt/result digests, round-2 NO-GO status, and the structural-only limitation.
+
+2. bash scripts/verify.sh --require-go
+   Exit 1, as expected.
+   It rejected the current round-2 non-GO receipt, nonempty unresolved findings, missing raw gate record, and old 11-file reviewed set.
+
+3. PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts/test_verify.py -v
+   Exit 0.
+   Ran 18 tests in 0.854 seconds; all passed.
+
+4. bash -n scripts/verify.sh
+   Exit 0; no output.
+
+5. SHA-256 checks
+   All 18 candidate files matched before and after review. The round-2 raw result also matched its required digest.
+
+CONDITIONS OR REQUIRED FIXES
+
+No blocking correction is required for this exact G0 tree.
+
+This approval remains valid only for these 18 exact file hashes. Any change to a reviewed plan, verifier, test, or evidence file invalidates it and requires a fresh review.
+
+RESIDUAL RISK
+
+No evidence establishes actual session coverage, reminder frequency, live database behavior, read-only canary behavior, sentinel containment, provider/network egress, backup/sync exclusion, labeler availability, handoff isolation, or deletion feasibility. Those remain R0a/R0b gates, not inferred successes.
+
+No DB, history, canary, output-sentinel fixture, corpus, candidate repository, or live runtime/configuration was inspected. The R0b paragraph is accepted only as a coherent, fail-closed, testable design contract.
+
+The mutable receipt and verifier do not authenticate who performed a review or whether the reviewer exercised sound judgment. Independent human/process provenance remains necessary.
+
+SINGLE SMALLEST SAFE NEXT ACTION
+
+A separate integrator may preserve this exact report as the round-3 result, bind it to the unchanged 18-file manifest in the review receipt, and rerun `bash scripts/verify.sh --require-go`. That filing step is not performed or authorized by this review; R0a still requires separate explicit authorization.
+
+AUTHORIZATION BOUNDARY
+
+This result does not authorize R0a or R0b execution, session/history/database access, corpus collection, provider/configuration/service action, installation, implementation, publication, commit, deployment, deletion, or candidate-repository access. It establishes only that the exact reviewed G0 plan is eligible to proceed to an authorization decision for R0a.
+
+GATE_RECORD_JSON: {"verdict":"GO","unresolved_findings":[]}

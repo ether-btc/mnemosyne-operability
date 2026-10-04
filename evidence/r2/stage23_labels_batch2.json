@@ -1,0 +1,92 @@
+[
+  {
+    "message_id": 198959,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(betterask-hermes) for betterask question. Correct."
+  },
+  {
+    "message_id": 199125,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check mw-sweeper state. Correct for cron job."
+  },
+  {
+    "message_id": 199243,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used read_file to read code review prompt. Correct."
+  },
+  {
+    "message_id": 199900,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "incomplete",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "No response recorded. Task not completed."
+  },
+  {
+    "message_id": 199911,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "incomplete",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "No response recorded. Task not completed."
+  },
+  {
+    "message_id": 200166,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used read_file to read arbiter prompt. Correct."
+  },
+  {
+    "message_id": 200415,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal for code review via OpenRouter. Correct."
+  },
+  {
+    "message_id": 201513,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mcp__repomix__pack_remote_repository for repo audit. Correct."
+  },
+  {
+    "message_id": 217632,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mnemosyne_task_progress to check status. Reasonable for check-in."
+  },
+  {
+    "message_id": 202258,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(bot-mode-teammate-creation) for new bot. Correct."
+  }
+]

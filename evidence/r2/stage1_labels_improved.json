@@ -1,0 +1,23 @@
+[
+  {
+    "eligible": false,
+    "expected_capability": "audit and development",
+    "rationale": "The question is not about a specific task or capability but rather a general inquiry about the auditing and development process of a system.",
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12495
+  },
+  {
+    "eligible": true,
+    "expected_capability": "Codex",
+    "rationale": "The task involves using Codex to develop a project, which requires knowledge and understanding of AI agent capabilities. Codex is a tool designed for generating text-based responses, which aligns with the task of developing a project.",
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57211
+  },
+  {
+    "eligible": false,
+    "expected_capability": "cron-fleet-maintenance",
+    "rationale": "The case involves maintenance of cron jobs, but the user directives and findings do not align with the expected capabilities for a cron-fleet-maintenance task.",
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86098
+  }
+]

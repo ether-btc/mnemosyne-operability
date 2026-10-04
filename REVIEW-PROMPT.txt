@@ -1,0 +1,43 @@
+You are the independent, READ-ONLY round-2 plan and verifier reviewer for `/home/hermes-pi/projects/mnemosyne-operability/`.
+
+## Hard boundaries
+Do not edit or create files. Do not access session message text, session databases, live services/configuration, credentials, external endpoints, or candidate repositories; do not install or publish anything. Read only the project files named below, including the preserved round-1 result, cited local evidence, and pinned source snapshots if necessary. You may run the project's local verifier and black-box tests. Do not treat prior summaries, bot opinions, or a clean process exit as evidence of a completed review.
+
+## Objective
+Decide whether this exact revised project plan is safe, usable, and measurable enough to advance to R0 metadata/coverage work after approval. Its aim is to reduce avoidable user reminders by improving Hermes' reliable discovery and correct use of existing Mnemosyne, wiki, skills, and tools, while preserving upstream updateability and avoiding unneeded new layers. Awareness means task-appropriate just-in-time discovery/use—not full inventory stuffing. “No build” and “inconclusive” are valid terminal outcomes.
+
+## Round-1 finding closure to verify against current files
+The original result is preserved at `evidence/reviews/round-1/REVIEW-RESULT.txt` (SHA-256 `ef4597ad0f1442589475f5d6ed021b125ef70f76edbe78448ef6586e0626739f`). Its finding conditions were:
+- F1: reproducible capability-opportunity denominator, fixed bounded frame, contemporaneous availability, non-reminder controls, explicit exclusions.
+- F2: frozen disjoint development/evaluation sets; no tuning after evaluation reveal.
+- F3: known-positive coverage canary; mandatory blinded local double labels or INCONCLUSIVE; agreement/adjudication, exclusions and uncertainty rules.
+- F4: local access/retention/backup/deletion/provider boundary plus inert treatment of adversarial historical text.
+- F5: independent exact-hash GO after any material plan/control change; self-disposition cannot close a blocker.
+- F6: corrected source measurement and preserved/pinned evidence.
+- F7: executable, phase-aware verifier with honest limits and a fail-closed exact-hash review path.
+
+## Exact files under review (SHA-256)
+6a8a327d614affe892c19f65bb8f4739693ef85904bf1820f19cb829d39b9622  README.md
+25ef567fbcaaaa9f7f0be70b03fac049a6a2d4468950f0c91e0f827c83bac330  PRAXIS.md
+b2d28496084f5781f3bbd124f722441e593644036d8fe0f3acd3cd3bd57f9d46  METHODOLOGY.md
+ce39e5fee57c001039a8bc5f22651a7077c2d89b1610ed6a1bcbfb4d049c2eb6  CODEBOOK.md
+01f38f821869e8aed07b35d9b9ef7838adf48e0d1e39c5e85f126ce5bd302b09  ROADMAP.md
+45d72508e80d5811d7a011dd2d790bc73c326ae331501fc27f818ed1531c7aad  DECISIONS.md
+33ac5a08131c86e81fb52cd2d3c33836957c123b40f9478b39b53c1745d19652  STATUS.md
+a47176ad082290357d36589f4d3a5d5dc1271f7208c3ac0fc8f5535e283723ac  SOURCES.md
+344056693bfd36228dbec5708df84256301cfe3f8ea55a0caf072ace8a417a66  EXECUTION-PROMPT.md
+029ed6ae54660793acd6e459e2e798efeef0e8b4b12f21733827ef2decc8593a  scripts/verify.sh
+e6f5bc8bf9eafc9e0b69b4f7b3bc0aeea41f46f5e4829820f648c44782d0d6f8  scripts/test_verify.py
+
+Recompute each SHA-256 before and after inspection. If any mismatch occurs, stop and report INCOMPLETE; do not review a different tree under this manifest. The prompt and raw-result hashes are separately recorded in `review-state.json`.
+
+## Review lenses
+1. **Fidelity:** validate the stated problem, sources, dates, counts, local host/source claims, candidate-repo qualification, and references. Distinguish facts from inference; do not use external facts.
+2. **Measurement quality:** does the opportunity definition avoid reminder-enriched selection bias? Are frame, non-reminder controls, sampling, denominator, blinded labels, disagreements, uncertainty, holdout separation and stop rules executable and non-leaky?
+3. **Privacy/safety:** can R0 prove coverage without content access? Are privacy, provider egress, retention, deletion, backup/sync, permissions and inert untrusted input boundaries meaningful and sequenced before content access? Does the plan preserve Mnemosyne as upstream dependency and avoid unauthorized live effects?
+4. **Review-gate quality:** inspect `scripts/verify.sh` and `scripts/test_verify.py`. Run `./scripts/verify.sh`, `./scripts/verify.sh --require-go`, `python3 -m unittest scripts/test_verify.py -v`, and `bash -n scripts/verify.sh`. Confirm the default mode states only structural/hash consistency; the current round-1 receipt is refused; tests exercise acceptance and refusal including stale hashes, tampered result/prompt, unresolved findings and path escape. The script is not an independent reviewer/authenticator; flag any wording that implies otherwise. Do not edit.
+5. **Usability and proportionality:** could a fresh session follow the continuation prompt and roadmap without inventing missing policy? Is any evidence/control duplicated or more complex than needed? Identify the single smallest safe next step.
+6. **Inversion/adversarial:** explicitly test (by reasoning, not session data) selection leakage, retrospective failure enrichment, empty search treated as absence, accidental private-content egress, false GO from stale/mismatched bytes, and prompt-injection-shaped historical text.
+
+## Required report
+Return a substantive report with exact whole-output verdict line `VERDICT: GO` or `VERDICT: NO-GO-WITH-CONDITIONS`; use `VERDICT: INCOMPLETE` if any required check could not be completed. Include: scope/hash verification, BLOCKERS, MAJORS, MINORS, explicitly dispositionable low issues, round-1 finding-by-finding closure, exact commands/results run, residual risks, and the single smallest safe next action. Cite file plus heading/line for every finding and give its concrete consequence and minimum correction. A GO is valid only if all round-1 blockers/majors are resolved, no unresolved blockers or majors remain, and the exact hashes above still match. Do not infer authorization for R0 content access, corpus collection, implementation, database/config/service/provider action, or publication from this review.

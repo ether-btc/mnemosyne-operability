@@ -1,0 +1,299 @@
+[
+  {
+    "message_id": 12495,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(hermes-agent) and other tools to answer about RTK. Appropriate tool selection."
+  },
+  {
+    "message_id": 57211,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to explore PROMPRO project state before acting. Correct approach."
+  },
+  {
+    "message_id": 104090,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used shell to check for malware/antivirus tools. Direct and correct."
+  },
+  {
+    "message_id": 115589,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(prompt-design) and diagnostic skills to craft crash investigation prompt. Correct."
+  },
+  {
+    "message_id": 125613,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used appropriate tools to check disk space and identify forks. Correct approach."
+  },
+  {
+    "message_id": 166227,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(prompt-design) to re-craft prompt. Correct tool for the task."
+  },
+  {
+    "message_id": 173539,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(skill-authoring) for AAAK compression task. Correct."
+  },
+  {
+    "message_id": 175705,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(codebase-comprehension) to assess repo. Correct."
+  },
+  {
+    "message_id": 180576,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(hermes-agent) for hermes update task. Correct."
+  },
+  {
+    "message_id": 191281,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(memory-md-maintenance) for memory.md optimization. Correct."
+  },
+  {
+    "message_id": 198414,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant transcribed image directly without using tools. Task completed but no tool used despite vision_analyze being available."
+  },
+  {
+    "message_id": 196679,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to run upstream-diff.sh for repo-upstream-sync. Correct."
+  },
+  {
+    "message_id": 196767,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant provided merge debate judgment directly without tools. Appropriate for this task type."
+  },
+  {
+    "message_id": 196779,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mnemosyne_recall to gather context for merge debate. Correct."
+  },
+  {
+    "message_id": 198872,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mnemosyne_recall to check mattermost on RPi3. Correct."
+  },
+  {
+    "message_id": 198959,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(betterask-hermes) for betterask question. Correct."
+  },
+  {
+    "message_id": 199125,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check mw-sweeper state. Correct for cron job."
+  },
+  {
+    "message_id": 199243,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used read_file to read code review prompt. Correct."
+  },
+  {
+    "message_id": 199900,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "incomplete",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "No response recorded. Task not completed."
+  },
+  {
+    "message_id": 199911,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "incomplete",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "No response recorded. Task not completed."
+  },
+  {
+    "message_id": 200166,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used read_file to read arbiter prompt. Correct."
+  },
+  {
+    "message_id": 200415,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal for code review via OpenRouter. Correct."
+  },
+  {
+    "message_id": 201513,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mcp__repomix__pack_remote_repository for repo audit. Correct."
+  },
+  {
+    "message_id": 217632,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used mnemosyne_task_progress to check status. Reasonable for check-in."
+  },
+  {
+    "message_id": 202258,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(bot-mode-teammate-creation) for new bot. Correct."
+  },
+  {
+    "message_id": 202307,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check existing profiles/skills before deciding. Correct approach."
+  },
+  {
+    "message_id": 202407,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Test message requiring exact reply. No tool needed. Correct response."
+  },
+  {
+    "message_id": 202429,
+    "agent_action": "not_selected",
+    "correct_use": false,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Test message requiring exact reply. No tool needed. Correct response."
+  },
+  {
+    "message_id": 203167,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(prompro) for cron job. Correct."
+  },
+  {
+    "message_id": 203621,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used tool_describe to check process_manage. Correct approach."
+  },
+  {
+    "message_id": 205168,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to check praxis state. Correct for skill invocation."
+  },
+  {
+    "message_id": 205174,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used terminal to run upstream-diff.sh. Correct for skill invocation."
+  },
+  {
+    "message_id": 205418,
+    "agent_action": "used_correctly",
+    "correct_use": true,
+    "task_outcome": "correct",
+    "avoidable_reminder": false,
+    "reminder_type": "none",
+    "rationale": "Assistant used skill_view(betterask-hermes) for job application question. Correct."
+  }
+]

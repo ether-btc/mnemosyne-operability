@@ -1,0 +1,289 @@
+[
+  {
+    "eligible": true,
+    "expected_capability": "system auditing and development",
+    "rationale": "The case involves understanding the auditing and development process of a system, which requires knowledge of system auditing and development processes.",
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12495
+  },
+  {
+    "eligible": true,
+    "expected_capability": "PROMPRO",
+    "rationale": "The task involves developing and improving PROMPRO, which is a specific AI agent. The requirement to use autonomous mode and set minimax/minimax-m3 reasoning effort to 'high' indicates a need for advanced AI capabilities and reasoning, which aligns with the development of PROMPRO.",
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57211
+  },
+  {
+    "eligible": false,
+    "expected_capability": "cron-update-tool",
+    "rationale": "The case involves updating cron jobs, but the provided information does not indicate the use of a specific tool or skill for this task.",
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86098
+  },
+  {
+    "eligible": true,
+    "expected_capability": "antivirus_scanner",
+    "rationale": "The case involves checking for the presence of a malware or antivirus scanner on a Debian OS, which requires identifying and locating a specific tool or capability.",
+    "session_id": "20260825_131537_152c3a",
+    "message_id": 104090
+  },
+  {
+    "eligible": true,
+    "expected_capability": "crash investigation",
+    "rationale": "The task involves investigating the cause of a recent crash, which requires identifying the root cause and potential solutions.",
+    "session_id": "20260826_144147_6c2a3c",
+    "message_id": 115589
+  },
+  {
+    "eligible": true,
+    "expected_capability": "disk management",
+    "rationale": "The case involves finding safe ways to free up disk space, which requires knowledge of disk management tools or techniques.",
+    "session_id": "bg_003729_76a1e7",
+    "message_id": 125613
+  },
+  {
+    "eligible": false,
+    "expected_capability": "none",
+    "rationale": "The case description is not provided, so it is impossible to determine if it requires a named tool/skill/memory/wiki.",
+    "session_id": "20260829_191848_559cba",
+    "message_id": 192792
+  },
+  {
+    "eligible": true,
+    "expected_capability": "system architecture and setup optimization",
+    "rationale": "The prompt describes a task that requires understanding and optimizing the system architecture and setup for a research study on AI agent capability discovery. This involves deep project grounding, systematic profiling, and identifying performance-critical subsystems, which aligns with the criteria for an actionable task requiring a named tool/skill/memory/wiki.",
+    "session_id": "20260829_203839_1f8400",
+    "message_id": 166227
+  },
+  {
+    "eligible": true,
+    "expected_capability": "PRAXIS methodology application",
+    "rationale": "The task involves applying the PRAXIS methodology to a project, which requires understanding and executing the methodology's steps. This is an actionable task requiring a named tool/skill.",
+    "session_id": "20260830_113432_242061",
+    "message_id": 173539
+  },
+  {
+    "eligible": true,
+    "expected_capability": "code-review",
+    "rationale": "The task involves assessing a code template, which requires code review skills.",
+    "session_id": "20260830_161908_817a92",
+    "message_id": 175705
+  },
+  {
+    "eligible": true,
+    "expected_capability": "project management",
+    "rationale": "The task involves creating a project to safely update Hermes, which requires planning, execution, and monitoring. This aligns with project management capabilities.",
+    "session_id": "20260831_124402_fa886e",
+    "message_id": 180576
+  },
+  {
+    "eligible": true,
+    "expected_capability": "system",
+    "rationale": "The task involves optimizing memory usage and making the system prefer not to store certain data in memory, which requires understanding system behavior and potentially using system tools or commands to achieve the desired outcome.",
+    "session_id": "20260902_181454_58e1b0",
+    "message_id": 191281
+  },
+  {
+    "eligible": true,
+    "expected_capability": "image analysis",
+    "rationale": "The task involves transcribing an image into data for analysis, which requires identifying the meaning of 'SY' and how to get it. This falls under image analysis.",
+    "session_id": "20260903_223152_5f4dbf5c",
+    "message_id": 198414
+  },
+  {
+    "eligible": true,
+    "expected_capability": "repo-upstream-sync",
+    "rationale": "The case describes a scenario where a local fork of a repository is being kept in sync with an upstream source while preserving divergences, which aligns with the description of the 'repo-upstream-sync' skill.",
+    "session_id": "cron_13aff6d1dafa_20260904_090013",
+    "message_id": 196679
+  },
+  {
+    "eligible": true,
+    "expected_capability": "PR #16 (PROMPRO audit-chain serialization, head 16d2ac2, base main) merge-ready to main right now",
+    "rationale": "The PR has been reviewed and tested, with no major issues found. The merge does not start the 72h live soak, and the code is ready to be landed on the main branch.",
+    "session_id": "20260904_093650_4135a1",
+    "message_id": 196767
+  },
+  {
+    "eligible": true,
+    "expected_capability": "PR #16 (PROMPRO audit-chain serialization, head 16d2ac2, base main) merge-ready to main right now",
+    "rationale": "The PR has been reviewed and tested, with no major issues found. The merge does not start the 72h live soak, and the code is ready to be landed on the main branch.",
+    "session_id": "20260904_093858_15af2b",
+    "message_id": 196779
+  },
+  {
+    "eligible": false,
+    "expected_capability": "None",
+    "rationale": "The case does not provide enough information to determine if the daemon should be paused or stopped. The provided context does not specify the current state of the project or the expected outcome of the 72-hour soak.",
+    "session_id": "20260904_154705_891e37",
+    "message_id": 197693
+  },
+  {
+    "eligible": true,
+    "expected_capability": "network configuration",
+    "rationale": "The task involves configuring a server, which requires knowledge of network settings and tools.",
+    "session_id": "20260904_233644_536f227a",
+    "message_id": 198872
+  },
+  {
+    "eligible": true,
+    "expected_capability": "betterask",
+    "rationale": "The user message is asking for the first betterask question, which implies an actionable task requiring a named tool/skill/memory/wiki.",
+    "session_id": "20260905_103107_f5cc7d11",
+    "message_id": 198959
+  },
+  {
+    "eligible": true,
+    "expected_capability": "python scripting",
+    "rationale": "The case involves running a Python script (live_run1.py) and capturing its output and exit code, which requires knowledge of Python scripting.",
+    "session_id": "cron_cf1731864088_20260905_115130",
+    "message_id": 199125
+  },
+  {
+    "eligible": true,
+    "expected_capability": "SQL query execution",
+    "rationale": "The task involves executing a SQL query to read the prompt file and inspect the live DB, which requires knowledge of SQL.",
+    "session_id": "20260905_123446_dde6b5",
+    "message_id": 199243
+  },
+  {
+    "eligible": false,
+    "expected_capability": "none",
+    "rationale": "The case is about labeling a case, not about assessing a URL or project.",
+    "session_id": "20260905_142845_66665912",
+    "message_id": 199711
+  },
+  {
+    "eligible": true,
+    "expected_capability": "code review",
+    "rationale": "The case involves an independent code review of a specific branch in a repository, which is a common task in software development.",
+    "session_id": "20260905_144635_18d4a2",
+    "message_id": 199900
+  },
+  {
+    "eligible": true,
+    "expected_capability": "code review",
+    "rationale": "The case involves an independent code review of a specific branch in a Git repository, focusing on the use of read-only connections to SQLite databases and the verification of configuration settings.",
+    "session_id": "20260905_144659_a3aa7f",
+    "message_id": 199911
+  },
+  {
+    "eligible": true,
+    "expected_capability": "Adversarial Review",
+    "rationale": "The task involves reviewing an upstream GitHub contribution proposal for an adversarial review request, which requires specific criteria and guidelines to be followed.",
+    "session_id": "20260905_164016_1c3500",
+    "message_id": 200166
+  },
+  {
+    "eligible": true,
+    "expected_capability": "code review",
+    "rationale": "The case involves reviewing changes to a codebase, including a specific branch and its dependencies, and auditing the code for various security and functionality issues. This requires a deep understanding of the codebase and the ability to identify and address potential vulnerabilities.",
+    "session_id": "20260905_170121_244e46",
+    "message_id": 200415
+  },
+  {
+    "eligible": true,
+    "expected_capability": "code review",
+    "rationale": "The case involves code review, which is a common task in software development and requires a specific set of skills and knowledge.",
+    "session_id": "20260905_190029_1737bd1b",
+    "message_id": 201513
+  },
+  {
+    "eligible": true,
+    "expected_capability": "none",
+    "rationale": "The user message is a simple question and does not require any specific AI agent capability to be labeled.",
+    "session_id": "20260905_194239_507a4a34",
+    "message_id": 217632
+  },
+  {
+    "eligible": true,
+    "expected_capability": "AI agent capability discovery",
+    "rationale": "The case describes a new AI agent with specific capabilities and principles, which aligns with the criteria for AI agent capability discovery.",
+    "session_id": "20260905_212249_ddaabf4c",
+    "message_id": 202258
+  },
+  {
+    "eligible": true,
+    "expected_capability": "labeling",
+    "rationale": "The case involves analyzing a case and providing a label based on specific criteria.",
+    "session_id": "20260905_212846_ef7be7a4",
+    "message_id": 202307
+  },
+  {
+    "eligible": true,
+    "expected_capability": "AI agent capability discovery",
+    "rationale": "The case involves labeling a case for a research study on AI agent capability discovery, which aligns with the criteria provided.",
+    "session_id": "20260905_214518_9a5ca3",
+    "message_id": 202407
+  },
+  {
+    "eligible": true,
+    "expected_capability": "AI agent capability discovery",
+    "rationale": "The case involves the discovery of AI agent capabilities, which aligns with the research study on AI agent capability discovery.",
+    "session_id": "20260905_214727_fb5038",
+    "message_id": 202429
+  },
+  {
+    "eligible": true,
+    "expected_capability": "git",
+    "rationale": "The task involves checking git status and comparing HEAD with origin/main, which requires knowledge of Git commands.",
+    "session_id": "cron_eb3cc95d23c5_20260906_100023",
+    "message_id": 203167
+  },
+  {
+    "eligible": true,
+    "expected_capability": "process_manage",
+    "rationale": "The task involves waiting for a specific process to complete and retrieving its output, which aligns with the use of the `process_manage` tool.",
+    "session_id": "20260906_144221_4f4e8a",
+    "message_id": 203621
+  },
+  {
+    "eligible": false,
+    "expected_capability": "none",
+    "rationale": "The case description does not provide any actionable tasks or require a specific named tool, skill, memory, or wiki.",
+    "session_id": "20260906_195139_9cb6dedf",
+    "message_id": 204687
+  },
+  {
+    "eligible": false,
+    "expected_capability": "None",
+    "rationale": "The case is a GitHub repository URL and does not contain any actionable tasks or requirements for a named tool/skill/memory/wiki.",
+    "session_id": "20260906_215704_cca631",
+    "message_id": 204945
+  },
+  {
+    "eligible": false,
+    "expected_capability": "none",
+    "rationale": "The case description is incomplete and does not provide enough information to determine if it is an actionable task requiring a named tool/skill/memory/wiki.",
+    "session_id": "20260906_231953_17756046",
+    "message_id": 204957
+  },
+  {
+    "eligible": true,
+    "expected_capability": "praxis-upstream-sync",
+    "rationale": "The case involves following the 'praxis-upstream-sync' skill protocol, which is a specific task requiring the execution of a diff script and capturing its JSON output.",
+    "session_id": "cron_6b5f4a26a1e1_20260907_090106",
+    "message_id": 205168
+  },
+  {
+    "eligible": true,
+    "expected_capability": "last30days-upstream-sync",
+    "rationale": "The case involves the 'last30days-upstream-sync' skill, which is a specific protocol for syncing the 'last30days-skill' engine with upstream. This is an actionable task requiring the 'last30days-upstream-sync' skill.",
+    "session_id": "cron_3a291aa26017_20260907_090128",
+    "message_id": 205174
+  },
+  {
+    "eligible": false,
+    "expected_capability": "none",
+    "rationale": "The case description is incomplete and does not provide enough information to determine if it requires a named tool/skill/memory/wiki.",
+    "session_id": "20260907_161549_ec1facc6",
+    "message_id": 205316
+  },
+  {
+    "eligible": true,
+    "expected_capability": "AI agent capability discovery",
+    "rationale": "The case describes a scenario where an AI agent is interacting with a user to understand their needs and capabilities. It involves analyzing the user's workflow and identifying potential areas for improvement or development.",
+    "session_id": "20260907_164312_fbf5cb40",
+    "message_id": 205418
+  }
+]

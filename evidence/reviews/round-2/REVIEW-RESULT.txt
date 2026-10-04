@@ -1,0 +1,371 @@
+[0;93m2026-10-04 06:48:21.370736580 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card1": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card1/device/vendor"[m
+[0;93m2026-10-04 06:48:21.370817487 [W:onnxruntime:Default, device_discovery.cc:285 GetGpuDevices] Failed to detect devices under "/sys/class/drm/card0": device_discovery.cc:94 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+VERDICT: NO-GO-WITH-CONDITIONS
+
+SCOPE AND HASH VERIFICATION
+
+Reviewer/run:
+  Reviewer — independent read-only round-2 plan and verifier review.
+
+Decision supported:
+  Whether the exact revised plan is safe, usable, and measurable enough to advance, after approval, to R0 metadata/coverage work.
+
+Target:
+  /home/hermes-pi/projects/mnemosyne-operability/
+
+Exact-tree result:
+  All 11 supplied SHA-256 file-content digests matched before inspection and matched again after all reads and permitted checks:
+
+  6a8a327d614affe892c19f65bb8f4739693ef85904bf1820f19cb829d39b9622  README.md
+  25ef567fbcaaaa9f7f0be70b03fac049a6a2d4468950f0c91e0f827c83bac330  PRAXIS.md
+  b2d28496084f5781f3bbd124f722441e593644036d8fe0f3acd3cd3bd57f9d46  METHODOLOGY.md
+  ce39e5fee57c001039a8bc5f22651a7077c2d89b1610ed6a1bcbfb4d049c2eb6  CODEBOOK.md
+  01f38f821869e8aed07b35d9b9ef7838adf48e0d1e39c5e85f126ce5bd302b09  ROADMAP.md
+  45d72508e80d5811d7a011dd2d790bc73c326ae331501fc27f818ed1531c7aad  DECISIONS.md
+  33ac5a08131c86e81fb52cd2d3c33836957c123b40f9478b39b53c1745d19652  STATUS.md
+  a47176ad082290357d36589f4d3a5d5dc1271f7208c3ac0fc8f5535e283723ac  SOURCES.md
+  344056693bfd36228dbec5708df84256301cfe3f8ea55a0caf072ace8a417a66  EXECUTION-PROMPT.md
+  029ed6ae54660793acd6e459e2e798efeef0e8b4b12f21733827ef2decc8593a  scripts/verify.sh
+  e6f5bc8bf9eafc9e0b69b4f7b3bc0aeea41f46f5e4829820f648c44782d0d6f8  scripts/test_verify.py
+
+Additional provenance:
+  - Round-1 result matched the required SHA-256:
+    ef4597ad0f1442589475f5d6ed021b125ef70f76edbe78448ef6586e0626739f
+  - Round-1 prompt matched review-state.json:
+    ce1ea48c913142d3c732d8bed7bab52273f7b849ec96f8d0ad2fa4568f8bba52
+  - review-state.json remained unchanged at:
+    55f4a0229be2ce8e7bba7d1dc32a1d8eaae5f29937c6e9fdfa39360698f575f4
+
+Inspection:
+  - All 11 reviewed files and the complete preserved round-1 result were read.
+  - Cited wiki evidence, redacted project evidence, pinned upstream snapshots, licenses, and cited host-source line ranges were checked.
+  - No session message text, session database, live service/configuration, credential, external endpoint, or candidate repository was accessed.
+  - No project file was edited or created, and no installation, publication, or live action occurred.
+
+BLOCKERS
+
+No review-completion blocker occurred: identity, exact bytes, source material, and required local commands were available.
+
+The gate nevertheless remains closed because five MAJOR findings remain.
+
+MAJORS
+
+1. R0’s known-positive coverage check conflicts with its no-content boundary
+
+Severity:
+  MAJOR
+
+Locations:
+  - ROADMAP.md, “Tasks,” line 13
+  - METHODOLOGY.md, “Frozen sampling frame and split,” line 15
+  - METHODOLOGY.md, “Privacy, security, and retention gate,” lines 29–31
+  - EXECUTION-PROMPT.md, “Corrected workflow,” line 39
+
+Observed behavior:
+  R0 is described as proving a known-positive history-search hit “without reading message text,” and the continuation prompt says message text remains untouched until those checks pass. The same plan recognizes that a content-returning search response can enter the provider-bound assistant session. It specifies no local count-only or snippet-suppressing query path that can establish the positive hit without returning historical content.
+
+Concrete consequence:
+  A fresh integrator must either violate the no-content/provider boundary to complete R0 or remain unable to complete R0. The current sequence cannot prove coverage under its own privacy rule.
+
+Reproduction status:
+  SOURCE-REPRODUCED by tracing the stated R0 input, search operation, output, and consumer. No session search was run because doing so was prohibited.
+
+Affected gate:
+  F3, F4, R0 coverage/privacy.
+
+Disposition:
+  REJECT.
+
+Minimum correction:
+  Split R0 into:
+  1. metadata, transport, provider-egress, permissions, and backup/sync preflight; then
+  2. an explicitly specified local canary operation whose output is restricted to a boolean/count and opaque locator, with no transcript snippet.
+  If the available search interface cannot suppress content, the rule must require INCOMPLETE rather than allowing the normal assistant session to receive it. Declare the canary non-scored or outside the evaluation partition.
+
+Verification required:
+  Demonstrate the exact local canary command/interface and its output schema without exposing message text, then confirm that failure to suppress content stops the run.
+
+Gate remains blocked:
+  Yes.
+
+2. The blinded labeling sequence omits the stage needed to score agent behavior
+
+Severity:
+  MAJOR
+
+Locations:
+  - METHODOLOGY.md, “Case labels and adjudication,” lines 22–25
+  - CODEBOOK.md, “Ordered adjudication,” lines 15–19
+  - CODEBOOK.md, “Scoring and adjudication,” lines 23–25
+
+Observed behavior:
+  The two labelers first see only the initial request and pre-answer context. The next stated step jumps directly to revealing the user follow-up. Yet `agent_action` and `task_outcome` require the assistant answer and tool trace, and CODEBOOK.md says task-correctness is frozen before follow-up without specifying when the answer becomes visible.
+
+Concrete consequence:
+  Labelers must either invent task-correctness without seeing the answer or see outcome material before eligibility/expected-action labels are safely frozen. Either path weakens reproducibility and allows outcome leakage.
+
+Reproduction status:
+  SOURCE-REPRODUCED from the defined labeling state transitions.
+
+Affected gate:
+  F3, R1/R2 measurement validity.
+
+Disposition:
+  REJECT.
+
+Minimum correction:
+  Define a three-stage blinded protocol:
+  1. Initial request and contemporaneous pre-answer evidence: freeze eligibility, expected capability/action, availability, and materiality.
+  2. Assistant answer/tool trace: freeze agent-action, correct-use, and task-outcome labels.
+  3. Later user turns: classify reminder/new information/new request/ambiguity.
+  Preserve both independent labels and adjudication at each applicable stage.
+
+Verification required:
+  Run the codebook against the required boundary cases and show that every field has an identified evidence stage with no later-stage leakage.
+
+Gate remains blocked:
+  Yes.
+
+3. The continuation workflow and roadmap disagree on phase identities and dependencies
+
+Severity:
+  MAJOR
+
+Locations:
+  - ROADMAP.md, “Tasks,” lines 14–19
+  - ROADMAP.md, “Dependencies,” line 22
+  - EXECUTION-PROMPT.md, “Corrected workflow,” lines 40–43
+
+Observed behavior:
+  ROADMAP.md defines R1 as manifest/split freezing, R2 as content labeling, and R3 as native-path mapping. EXECUTION-PROMPT.md calls content enumeration and labeling R1, native mapping R2, and the build decision R3. ROADMAP.md’s compact dependency graph says `R1 + R3-source-map → R4`, omitting R2 even though the R4 table requires R2 and R3.
+
+Concrete consequence:
+  A fresh session following the continuation prompt can start labeling under “R1” without demonstrating the roadmap’s separate freeze milestone, or interpret the dependency graph as allowing experiment design before the adjudicated baseline is complete.
+
+Reproduction status:
+  SOURCE-REPRODUCED by cross-document phase comparison.
+
+Affected gate:
+  F2, F3, continuation usability, holdout protection.
+
+Disposition:
+  REJECT.
+
+Minimum correction:
+  Use one canonical phase numbering and dependency graph. The minimum safe sequence is:
+  `R0 → R1 freeze → R2 label`, with `R3 source-map` parallel only where permitted, followed by `R2 + R3 → R4`.
+  Prefer removing the duplicate numbered workflow from EXECUTION-PROMPT.md and referencing ROADMAP.md rather than maintaining two copies.
+
+Verification required:
+  Cross-document check showing identical phase names, prerequisites, content-access boundaries, and done criteria.
+
+Gate remains blocked:
+  Yes.
+
+4. Access-control and adversarial-labeling execution remain underspecified
+
+Severity:
+  MAJOR
+
+Locations:
+  - METHODOLOGY.md, “Case labels and adjudication,” line 27
+  - METHODOLOGY.md, “Privacy, security, and retention gate,” lines 30–34
+  - CODEBOOK.md, “Boundary examples,” line 37
+  - CODEBOOK.md, “Privacy,” line 40
+
+Observed behavior:
+  The plan provides strong directory modes, local-only handling, retention, deletion, and inert-data language. It does not identify the authorized reader roles or explain how two independent labelers access `0700`/`0600` material without broadening access ad hoc. The no-tools/network/shell rule is explicitly attached to a later replay harness, not clearly to any model-assisted labeling interface that reads adversarial historical text.
+
+Concrete consequence:
+  Implementers may share one owner account, loosen permissions, copy cases into another surface, or expose prompt-injection-shaped text to a tool-enabled labeler. “Quoted inert evidence” is a policy statement but not yet an executable isolation boundary.
+
+Reproduction status:
+  SOURCE-REPRODUCED; no historical text was opened.
+
+Affected gate:
+  F4, R0 privacy preflight, R2 labeling safety.
+
+Disposition:
+  REJECT.
+
+Minimum correction:
+  Name the permitted reader roles and data handoff. Require an escaped/passive annotation surface with tools, network, credentials, and writes disabled for every non-human labeler—not only replay. Define the exact evidence that proves backup/sync exclusion and the exact deletion-verification receipt.
+
+Verification required:
+  Inspect only permissions/manifests and the labeler execution configuration before content access; run an isolated synthetic prompt-injection fixture without live tools or credentials.
+
+Gate remains blocked:
+  Yes.
+
+5. The exact-hash verifier can accept a contradictory or malformed review result
+
+Severity:
+  MAJOR
+
+Locations:
+  - scripts/verify.sh, lines 91–100
+  - scripts/verify.sh, lines 113–119
+  - scripts/test_verify.py, lines 90–136
+  - DECISIONS.md, “G0 verifier decision,” line 47
+
+Observed behavior:
+  `--require-go` accepts the raw result when any line matches `^VERDICT: GO\s*$`. It does not require a single authoritative verdict line or reject a second contradictory verdict line. Unresolved findings are taken only from mutable review-state.json rather than a reviewer-bound structured block in the raw result. The tests cover exact acceptance, stale files, tampered prompt/result, and receipt-declared unresolved findings, but not a raw result containing both GO and NO-GO or a GO line embedded in a malformed/interleaved review.
+
+Concrete consequence:
+  With a schema-2 receipt claiming GO and an empty unresolved list, a contradictory raw report containing one exact GO line can satisfy the machine gate. This converts malformed evidence into PASS even though the script correctly disclaims reviewer authentication.
+
+Reproduction status:
+  SOURCE-REPRODUCED from the acceptance predicates. A custom file-generating exploit test was not run because this review was constrained to the project’s supplied tests and no file creation.
+
+Affected gate:
+  F5, F7, exact-review integrity.
+
+Disposition:
+  REJECT.
+
+Minimum correction:
+  Require exactly one authoritative verdict record and reject every other verdict record. Bind a structured reviewer finding/disposition field to the raw result or reviewer-produced receipt; retain the explicit statement that no local script authenticates reviewer identity or judgment. Add a regression case for contradictory/multiple verdict lines.
+
+Verification required:
+  Black-box rejection of:
+  - simultaneous GO and NO-GO lines;
+  - duplicated verdict lines;
+  - malformed/interleaved result;
+  - GO with reviewer-declared unresolved blockers.
+  Existing stale-hash and tamper cases must continue passing.
+
+Gate remains blocked:
+  Yes.
+
+MINORS AND LOW ISSUES
+
+6. Primary metric terminology conflates reminders with unprompted omissions
+
+Severity:
+  MINOR
+
+Locations:
+  - PRAXIS.md, “Definition of success,” line 37
+  - METHODOLOGY.md, “Question and estimand,” lines 8–10
+
+Observed behavior:
+  The numerator is confirmed later user reminders, while some text calls the outcome “avoidable omissions/reminders.” An eligible incorrect response with no user reminder is a failure-stage/task-correctness result but is not in the stated reminder numerator.
+
+Consequence:
+  Reports could silently switch between reminder rate and broader omission rate.
+
+Disposition:
+  REJECT as wording; not independently gate-blocking.
+
+Minimum correction:
+  Call the primary outcome “avoidable reminder rate” and report unprompted omissions as a separate secondary outcome, or define a separate omission numerator.
+
+Verification:
+  Confirm every reported metric has one numerator, denominator, and label source.
+
+7. Two discovery records remain normalized transcriptions rather than raw receipts
+
+Severity:
+  LOW
+
+Locations:
+  - SOURCES.md, “Local primary records,” lines 11–13
+  - evidence/search/session-search-probes-2026-10-03.md, lines 3–13
+  - evidence/search/repohunt-discovery-2026-10-03.md, lines 3–16
+
+Observed behavior:
+  Session-search and RepoHunt records explicitly disclose that they are parent-session transcriptions, not raw tool output.
+
+Consequence:
+  Exact historical tool envelopes cannot be independently reconstructed from these artifacts.
+
+Disposition:
+  ACCEPT for the current gate because the search result is treated only as “no demonstrated coverage,” candidate claims are study-only, and load-bearing candidate files are pinned locally. Any future stronger claim must not rely on these transcriptions alone.
+
+Verification:
+  Preserve raw bounded receipts for future load-bearing probes, without session content or credentials.
+
+ROUND-1 FINDING CLOSURE
+
+F1 — Opportunity denominator and bounded frame:
+  CLOSED in substance.
+  PRAXIS.md lines 15–18, METHODOLOGY.md lines 6–17, and CODEBOOK.md lines 5–27 define the opportunity unit, fixed September frame, contemporaneous availability, outcome-independent sampling, non-reminder controls, and exclusions.
+
+F2 — Frozen disjoint development/evaluation sets:
+  OPEN.
+  METHODOLOGY.md line 16 contains the correct sealed-partition rule, but ROADMAP.md line 22 and EXECUTION-PROMPT.md lines 40–43 provide conflicting operational sequencing. Finding 3 must be corrected.
+
+F3 — Coverage canary, double labels, agreement and uncertainty:
+  OPEN.
+  The positive-control, two-label or inconclusive rule, agreement reporting, exclusions, and session-clustered interval are present. The canary cannot yet be completed under the no-content boundary, and the answer/follow-up labeling stages are incomplete. Findings 1 and 2 apply.
+
+F4 — Access, retention, backup/deletion, provider and inert-input controls:
+  OPEN.
+  Retention, local modes, deletion authorization, provider egress, and inert-input language are materially improved. Authorized readers, the no-content canary route, and labeler isolation remain non-executable. Findings 1 and 4 apply.
+
+F5 — Independent exact-hash GO; no self-closing blockers:
+  OPEN.
+  Prose correctly requires independent re-review and separates authorization. The machine gate rejects the preserved round-1 receipt and stale hashes, but it can accept contradictory raw verdict syntax and trusts a mutable unresolved-findings field. Finding 5 applies.
+
+F6 — Correct source measurement and preserved/pinned evidence:
+  CLOSED for this plan’s load-bearing claims.
+  The prefetch measurement independently reproduced as 11,009 bytes, 10,999 Unicode characters including the final newline, and 10,998 excluding it; SHA-256 matched `df4b397a…`. Wiki and upstream snapshot hashes matched. Candidate-repository claims remain proportionately classified as study-only.
+
+F7 — Executable phase-aware verifier with honest limits:
+  OPEN.
+  The script is executable, syntax-valid, phase-aware, and accurately disclaims semantic/authentication authority. Its current fail-closed contract is incomplete for malformed or contradictory review output. Finding 5 applies.
+
+REQUIRED COMMANDS AND OBSERVED RESULTS
+
+1. `./scripts/verify.sh`
+   Exit 0.
+   Reported 14 non-empty required artifacts, matching recorded round-1 prompt/result digests, historical round-1 NO-GO, and the explicit structural-only limitation.
+
+2. `./scripts/verify.sh --require-go`
+   Exit 1 as required.
+   Blocked schema version 1, non-GO verdict, stale round, absent explicit empty unresolved list, prompt-manifest mismatch, absent raw GO line, and incomplete reviewed-file coverage.
+
+3. `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts/test_verify.py -v`
+   Exit 0.
+   Nine tests ran in 0.360 seconds; all passed. They exercised GO acceptance and refusal for NO-GO, changed reviewed bytes, tampered result, prompt/manifest mismatch, receipt-declared unresolved findings, unknown options, and a required artifact symlinked outside the project.
+
+4. `bash -n scripts/verify.sh`
+   Exit 0; no output.
+
+5. File mode check:
+   `scripts/verify.sh` is mode 0755.
+
+ADVERSARIAL/INVERSION RESULTS
+
+- Retrospective failure enrichment:
+  DEFENDED in the main method by the complete bounded frame, metadata-defined sampling, and preserved non-reminder controls.
+
+- Selection/evaluation leakage:
+  PARTIALLY DEFENDED in METHODOLOGY.md, but the conflicting continuation phases can bypass the separate freeze milestone. Gate remains open.
+
+- Empty search treated as absence:
+  DEFENDED in prose; every cited zero-result record is correctly described as no demonstrated coverage. Operational positive-control sequencing still fails.
+
+- Accidental private-content egress:
+  NOT YET DEFENDED end to end because the canary’s content-suppressing execution path is unspecified.
+
+- False GO from stale/mismatched bytes:
+  DEFENDED for changed plan files and prompt/result digest mismatches.
+
+- False GO from malformed/contradictory bytes:
+  FAILED by source analysis; any exact GO line is sufficient once the mutable receipt agrees.
+
+- Prompt-injection-shaped historical text:
+  POLICY PRESENT, EXECUTION PARTIAL. Historical text is declared inert, but the same isolation controls are not unambiguously applied to labelers.
+
+RESIDUAL RISK
+
+No conclusion was reached about actual reminder frequency, actual session coverage, live provider behavior, current configuration, backup jobs, or candidate-repository state. External refs and commit resolution were not re-fetched. Historical host/config claims are supported by preserved evidence and matching cited source bytes, not by a current live-state check.
+
+SINGLE SMALLEST SAFE NEXT ACTION
+
+Keep R0 blocked. In one separately authorized G0 correction pass, make the R0 canary genuinely content-suppressing, define the three-stage label reveal, align the roadmap/continuation phase graph, specify labeler/access isolation, and make the verifier reject contradictory verdict records; then rerun the supplied checks and submit the new exact hashes for another independent review.
+
+AUTHORIZATION BOUNDARY
+
+This verdict does not authorize R0 metadata or content access, corpus collection, session/database inspection, implementation, configuration/service/provider action, candidate-repository access, installation, deletion, commit, publication, or deployment. It authorizes no external or live effect.

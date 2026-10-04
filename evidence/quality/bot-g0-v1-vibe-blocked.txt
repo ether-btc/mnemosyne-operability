@@ -1,0 +1,5 @@
+BLOCKED
+
+- **BLOCKER — Project controls unavailable.** The requested files could not be read at the expected project root `/home/hermes-pi`: all nine `read_file` requests returned “File not found.” A file search for `METHODOLOGY.md` also failed. I therefore could not inspect the controls or produce line-specific findings. The R0b content-suppression claim, exact process/output contract (`read_only=True`, logging, errors, managed interpreter/dependency barrier), staged label reveal, phase-graph source of truth, roles/handoff/no-tools rule, helper decision, and Markdown/stale-reference issues are all **unknown**.
+
+- **Minimal correction:** Provide the project root or make the listed controls available there. No project files were edited, no session history/database was accessed, and no network was used.

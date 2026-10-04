@@ -1,0 +1,19 @@
+Read-only follow-up. The prior consultation did not inspect the project: it searched relative paths from `/home/hermes-pi`, while the actual project root is `/home/hermes-pi/projects/mnemosyne-operability/`. That result is **BLOCKED, not a substantive review**. Please use the absolute paths below; do not search unrelated directories. If a path fails, report its exact path and stop rather than guessing.
+
+Project root: `/home/hermes-pi/projects/mnemosyne-operability/`
+Read these exact current files:
+- `/home/hermes-pi/projects/mnemosyne-operability/README.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/CODEBOOK.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/ROADMAP.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/DECISIONS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/STATUS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/SOURCES.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/EXECUTION-PROMPT.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/verify.sh`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/search/session-search-output-contract-2026-10-04.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/local-tool-checks-2026-10-04.md`
+
+Ponytail practical/engineering review for G0: assess the R0b low-level `SessionDB.search_messages(fields=["id","session_id"])` output-suppression design, the no-update managed-runtime condition, three-stage labeling, phase/source-of-truth consistency, reader handoff and isolation, verifier regression coverage, and unnecessary complexity. Do not access `state.db`, history, private text, live config/services, or network. Do not edit files. Return the exact paths you successfully read, then only concrete findings (severity, file/line, evidence, smallest correction) and `CLEAR` or `BLOCKED`. Distinguish unknown from verified. This is advisory, not the independent Reviewer Bot gate.

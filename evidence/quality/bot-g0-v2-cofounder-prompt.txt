@@ -1,0 +1,19 @@
+Read-only follow-up. The prior consultation did not inspect the project: it searched relative paths from `/home/hermes-pi`, while the actual project root is `/home/hermes-pi/projects/mnemosyne-operability/`. That result is **BLOCKED, not a substantive review**. Please use the absolute paths below; do not search unrelated directories. If a path fails, report its exact path and stop rather than guessing.
+
+Project root: `/home/hermes-pi/projects/mnemosyne-operability/`
+Read these exact current files:
+- `/home/hermes-pi/projects/mnemosyne-operability/README.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/CODEBOOK.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/ROADMAP.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/DECISIONS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/STATUS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/SOURCES.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/EXECUTION-PROMPT.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/verify.sh`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/search/session-search-output-contract-2026-10-04.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/local-tool-checks-2026-10-04.md`
+
+Your distinct assignment is research-design coherence, not implementation. Check: (1) primary avoidable-reminder numerator/denominator versus secondary unprompted omissions; (2) the three reveal stages, blindness, eligibility timing and controls; (3) the exact R0a → R0b → R1 → R2 chain and R3's permitted parallel scope; (4) the pre-content, metadata-defined session universe and non-reminder-preserving sampling; (5) named reader roles, labeler feasibility, local handoff, and fail-closed privacy/runtime gates; (6) whether EXECUTION-PROMPT and STATUS follow ROADMAP without duplicating phase truth. Do not access history/database/private text, live config/services, or network. Do not edit files. Return the exact paths successfully read, then concise `BLOCKERS / MAJORS / MINORS` with file/line evidence and end `CLEAR` or `BLOCKED`. State what cannot be verified without content. No questions to the user; no generic praise. This is advisory, not the independent Reviewer Bot gate.

@@ -1,0 +1,7 @@
+BLOCKERS: Required project files (PRAXIS.md, METHODOLOGY.md, CODEBOOK.md, ROADMAP.md, EXECUTION-PROMPT.md, DECISIONS.md, STATUS.md) were not found in the current working directory (/home/hermes-pi) or in any immediately apparent project subdirectories. A search located similarly named files only in unrelated project/wiki directories (e.g., ./projects/vibe-praxis-methodology-2026-08-30/, ./wiki/projects/...), none of which can be confirmed as the "current project" without further context. Without access to the actual file contents, the requested checks (avoidable-reminder rate numerators/denominators, label-reveal stages, eligibility timing, etc.) cannot be performed.
+
+MAJORS: None identified (pending file availability).
+
+MINORS: None identified (pending file availability).
+
+BLOCKED.

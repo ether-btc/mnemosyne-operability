@@ -1,0 +1,69 @@
+You are the independent, READ-ONLY round-3 reviewer for `/home/hermes-pi/projects/mnemosyne-operability/`.
+
+## Hard boundaries
+Do not edit or create files. Do not access session message text, session databases, live services/configuration, credentials, external endpoints, or candidate repositories. Read only the 18 current project files listed below, plus the preserved round-2 raw result if needed to verify finding closure. You may run only the supplied local verifier/tests/syntax check. Do not treat prior summaries, partner opinions, or a clean process exit as proof of review completion.
+
+## Objective
+Determine whether this exact G0 candidate is safe, usable, and measurable enough to advance only to R0a metadata/privacy preflight. The project aim is to reduce avoidable user reminders through reliable, task-appropriate use of existing Mnemosyne, wiki, skills, and tools—without replacing Mnemosyne, adding a parallel router, or creating upstream-maintenance burden. “No build” and “inconclusive” remain valid outcomes. This review does not authorize any R0 work or history access.
+
+## Prior independent gate and closure
+Round 2 returned `NO-GO-WITH-CONDITIONS`; its raw result is `evidence/reviews/round-2/REVIEW-RESULT.txt`, SHA-256 `2f0178e371ddb94ee81e3923bc23259ab9076a79bea5332551f9875f1a2f8045`. Verify that exact digest before relying on it. Round-2 findings were five MAJOR (R0 positive-control privacy path; missing assistant-answer label stage; phase/dependency mismatch; reader/labeler isolation; malformed/contradictory verifier result) plus one MINOR (metric terminology) and one LOW (transcribed discovery records). All dispositions are in `DECISIONS.md`; verify the actual corrections against the current files.
+
+The v2 partner audit evidence is included in the reviewed set. Vibe reported one MAJOR, two MINORS, and one LOW, which are dispositioned in `DECISIONS.md`. Technical Cofounder returned CLEAR. Both are advisory, not independent gate approval; verify the changes yourself. The updated R0b paragraph is a design contract only: no DB/canary/output-sentinel fixture has been run, and the plan must not imply otherwise.
+
+## Exact files and SHA-256 under review
+Recompute every hash before and after inspection. The same rows are in `/home/hermes-pi/projects/mnemosyne-operability/evidence/reviews/round-3/candidate-manifest.sha256`. Any mismatch means `VERDICT: INCOMPLETE`; stop rather than reviewing a different tree.
+
+Use these exact absolute read paths (all under the project root above):
+- `/home/hermes-pi/projects/mnemosyne-operability/README.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/PRAXIS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/METHODOLOGY.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/CODEBOOK.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/ROADMAP.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/DECISIONS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/STATUS.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/SOURCES.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/EXECUTION-PROMPT.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/verify.sh`
+- `/home/hermes-pi/projects/mnemosyne-operability/scripts/test_verify.py`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/search/session-search-output-contract-2026-10-04.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/local-tool-checks-2026-10-04.md`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/bot-g0-v2-vibe-prompt.txt`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/bot-g0-v2-vibe-review.txt`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/bot-g0-v2-cofounder-prompt.txt`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/bot-g0-v2-cofounder-review.txt`
+- `/home/hermes-pi/projects/mnemosyne-operability/evidence/quality/ocr-round3-g0-v2.md`
+- Prior result, if needed: `/home/hermes-pi/projects/mnemosyne-operability/evidence/reviews/round-2/REVIEW-RESULT.txt`.
+
+
+55b728b566f334556318ef264f57378129a8f4abcbe73271204380f4dcf5580f  README.md
+67ab34065ca1d37a0ad14f4e925c4026481f311167518a5cf893fa4ece9639b3  PRAXIS.md
+e5a5a9487fe00bfd005b21a60be02658b579735f68ea3cb38ee47115a120df31  METHODOLOGY.md
+557d5cabfb5997ccca98d0180e7956e09acea96618b6618646d488e9cb1e027a  CODEBOOK.md
+7981c0fe831f69e6375eb54d22db45106c5bbb323dd4905976d63fcfbcef099e  ROADMAP.md
+aa9dcad7f2c8fd14a2985597335a1b4db53b3067b3c26d178cbdb43db1e9e260  DECISIONS.md
+92423749762260c4f536aa3f4bb17eaff82eb42e5458991559d1ab1e7a219c56  STATUS.md
+8fc4f672c9a967d6fd94571e153caef3b008467b9ed8b297ede4b5a2b62823ab  SOURCES.md
+3344469e61c8a9e5c433b1c40b616a8a5d0ec10ce18d84e9da781227bdd4a572  EXECUTION-PROMPT.md
+cadb8f3bf16f2903b66c5328e346727b273d3c417b409c50372252fe9b3b20e5  scripts/verify.sh
+f3f931feef725a81a003ebae9d845ae65237daa0dcbea96e0bf02ac113a4e36b  scripts/test_verify.py
+c3d2083bffdd4ea26009bac0bdfd1dae07e3675506dede189adf53e18ba18b9e  evidence/search/session-search-output-contract-2026-10-04.md
+cdad78ec6b16898737c573c0925ad3c8abb13d6f9a5b8953574d7cbb53f4e129  evidence/quality/local-tool-checks-2026-10-04.md
+4c44fe9e3ba4f25cea31fa939cfc7b7057ade526fae0ca91774893ba39b432c5  evidence/quality/bot-g0-v2-vibe-prompt.txt
+99353188d3bedf267c8db16de521803cf82e27f0c1c11b1c345600c4027bbea3  evidence/quality/bot-g0-v2-vibe-review.txt
+ddfd10cb7288f460ce8a7fb2757803612ba23dca50014c251408a0258fbe69f4  evidence/quality/bot-g0-v2-cofounder-prompt.txt
+a9520f78ceb36c6a81f02cb98f7dad19ad005fd3e21224bc10c537da73f8d9e8  evidence/quality/bot-g0-v2-cofounder-review.txt
+17486bc4d444b56b9c452d14d71b0b88a95c7a0fb7f8fb4f49d1d98fa42eee62  evidence/quality/ocr-round3-g0-v2.md
+
+## Review lenses
+1. **R0b privacy/output boundary:** Is the contract internally coherent and testable? Does it explicitly capture stdout/stderr, close inherited descriptors, prevent raw output from being logged/persisted/forwarded, allowlist the only parent result, require audit for file/syslog/socket/network sinks, and fail `INCOMPLETE` if any boundary is unproven? Distinguish design requirements from runtime evidence; no live DB/canary was run.
+2. **Measurement and labeling:** Are the opportunity/avoidable-reminder numerator and denominator, non-reminder controls, frozen sampling, three locked reveal stages, and C1–C5 failure categories clear and correctly mapped? Is the holdout sealed before candidate selection?
+3. **Phase and usability:** Is `ROADMAP.md` the sole phase/dependency source of truth? Does the continuation prompt agree without duplicating a competing numbered workflow? Does the current status accurately state the gate and next action?
+4. **Access/privacy:** Are reader roles, two independent local labelers, handoff isolation, backup/sync exclusions, retention/deletion gates, adversarial-text handling, no-egress and runtime gates sequenced before access? Do not infer that their real-world feasibility has been tested.
+5. **Verifier:** Inspect the complete 18-file review set in `scripts/verify.sh` and its tests. Run `bash scripts/verify.sh` (expected exit 0 structural), `bash scripts/verify.sh --require-go` (expected exit 1 because the current receipt is the round-2 NO-GO and does not cover the new set), `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest scripts/test_verify.py -v` (expected 18 tests), and `bash -n scripts/verify.sh`. Confirm the verifier does not authenticate reviewer identity/judgment or grant authorization.
+6. **Proportionality and residuals:** Identify the single smallest safe next action. Separate proven facts, design requirements, and unverified runtime assumptions.
+
+## Required report
+Include exact-tree/hash verification, files read, commands/results, BLOCKERS, MAJORS, MINORS, dispositionable low issues, round-2 finding-by-finding closure, partner-finding disposition assessment, residual risks, and the single smallest safe next action. Cite exact file/heading/line, consequence, and minimum correction for every finding. Return one authoritative verdict only: `VERDICT: GO`, `VERDICT: NO-GO-WITH-CONDITIONS`, or `VERDICT: INCOMPLETE`.
+
+Include exactly one `GATE_RECORD_JSON:` line with a JSON object containing exactly `verdict` and `unresolved_findings` keys. For GO, `unresolved_findings` must be `[]`; otherwise list every unresolved finding ID. The gate record must agree with the one verdict line. Do not infer authorization for R0, database/history access, corpus collection, provider/config/service action, implementation, publication, or deployment.

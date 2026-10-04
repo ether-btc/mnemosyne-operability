@@ -1,0 +1,32 @@
+[
+  {
+    "label": "eligible",
+    "rationale": "The user is asking about the system's functionality, auditing, and development, which are all actionable tasks that require specific information.",
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12495
+  },
+  {
+    "label": "eligible",
+    "rationale": "The user request is clear and actionable, requiring the development of a project and setting reasoning effort levels.",
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57211
+  },
+  {
+    "label": "eligible",
+    "rationale": "The user provided explicit directives and the capability to review the cron-fleet maintenance work was required.",
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86098
+  },
+  {
+    "label": "eligible",
+    "rationale": "The user is asking about the presence of a malware and antivirus scanner on a Debian OS, which is a specific capability that could be required.",
+    "session_id": "20260825_131537_152c3a",
+    "message_id": 104090
+  },
+  {
+    "label": "eligible",
+    "rationale": "The user request is clear and actionable, requiring an effective prompt to investigate a recent crash.",
+    "session_id": "20260826_144147_6c2a3c",
+    "message_id": 115589
+  }
+]

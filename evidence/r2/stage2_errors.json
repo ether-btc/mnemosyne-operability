@@ -1,0 +1,14 @@
+[
+  {
+    "session_id": "20260829_203839_1f8400",
+    "error": "ERROR: could not parse label from: {\"agent_action\": \"used_correctly\", \"correct_use\": true, \"task_outcome\": \"correct\", \"rationale\": \"The assistant correctly invoked and interpreted the selected capabil"
+  },
+  {
+    "session_id": "20260904_093650_4135a1",
+    "error": "ERROR: could not parse label from: {\"agent_action\": \"used_correctly\", \"correct_use\": \"true\", \"task_outcome\": \"correct\", \"rationale\": \"The assistant correctly invoked the selected capability and interp"
+  },
+  {
+    "session_id": "cron_eb3cc95d23c5_20260906_100023",
+    "error": "ERROR: could not parse label from: {\"agent_action\": \"used_correctly\", \"correct_use\": true, \"task_outcome\": \"correct\", \"rationale\": \"The assistant correctly invoked the 'skill_view' function with the '"
+  }
+]

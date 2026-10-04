@@ -1,0 +1,290 @@
+[
+  {
+    "eligible": true,
+    "expected_capability": "codebase-comprehension",
+    "rationale": "The assistant response indicates that the capability 'codebase-comprehension' was used correctly, as it was invoked in policy/permission bounds and its result was interpreted correctly.",
+    "session_id": "20260809_232229_0c901e",
+    "message_id": 12496,
+    "task_start_message_id": 12495
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant response describes actions taken within a terminal environment, which is a common expected capability for AI agents in research studies.",
+    "session_id": "20260819_162237_92429e",
+    "message_id": 57212,
+    "task_start_message_id": 57211
+  },
+  {
+    "eligible": true,
+    "expected_capability": "hermes-system-audit",
+    "rationale": "The assistant response describes a tool call to the 'hermes-system-audit' skill, which is the expected capability for this case.",
+    "session_id": "20260823_112735_c4c323",
+    "message_id": 86100,
+    "task_start_message_id": 86098
+  },
+  {
+    "eligible": true,
+    "expected_capability": "clamscan",
+    "rationale": "The assistant response indicates that clamscan was checked for installed antivirus/malware scanner packages, which is a correct use of the capability.",
+    "session_id": "20260825_131537_152c3a",
+    "message_id": 104091,
+    "task_start_message_id": 104090
+  },
+  {
+    "eligible": true,
+    "expected_capability": "prompt-design",
+    "rationale": "The assistant response indicates that the prompt was loaded and the diagnostic skills were ground in the context of the last terminal session.",
+    "session_id": "20260826_144147_6c2a3c",
+    "message_id": 115590,
+    "task_start_message_id": 115589
+  },
+  {
+    "eligible": true,
+    "expected_capability": "df -h; lsblk -o NAME,SIZE,TYPE,MOUNTPOINT | head -40; du -sh /home/hermes-pi 2>/dev/null; du -sh /home/hermes-pi/* 2>/dev/null | sort -rh | head -40",
+    "rationale": "The assistant response shows the expected capability calls, which are used correctly.",
+    "session_id": "bg_003729_76a1e7",
+    "message_id": 125616,
+    "task_start_message_id": 125613
+  },
+  {
+    "eligible": true,
+    "expected_capability": "skill_view",
+    "rationale": "The assistant response indicates that the capability 'skill_view' was used correctly, as it was invoked in policy/permission bounds and its result was interpreted correctly.",
+    "session_id": "20260829_191848_559cba",
+    "message_id": 192794,
+    "task_start_message_id": 192792
+  },
+  {
+    "eligible": true,
+    "expected_capability": "praxis-problem-classification",
+    "rationale": "The assistant response indicates that the capability 'praxis-problem-classification' was selected and used correctly, with the task outcome being 'correct'.",
+    "session_id": "20260830_113432_242061",
+    "message_id": 173541,
+    "task_start_message_id": 173539
+  },
+  {
+    "eligible": true,
+    "expected_capability": "codebase-comprehension",
+    "rationale": "The assistant response indicates that the capability 'codebase-comprehension' was used correctly, as it was invoked in policy/permission bounds and its result was interpreted correctly.",
+    "session_id": "20260830_161908_817a92",
+    "message_id": 175706,
+    "task_start_message_id": 175705
+  },
+  {
+    "eligible": true,
+    "expected_capability": "praxis-problem-classification",
+    "rationale": "The assistant response indicates that the capability 'praxis-problem-classification' was used correctly, as it was invoked in policy/permission bounds and its result was interpreted correctly.",
+    "session_id": "20260831_124402_fa886e",
+    "message_id": 180577,
+    "task_start_message_id": 180576
+  },
+  {
+    "eligible": true,
+    "expected_capability": "codebase-comprehension",
+    "rationale": "The assistant response shows that the capability 'codebase-comprehension' was selected and invoked correctly, and its result was interpreted correctly.",
+    "session_id": "20260902_181454_58e1b0",
+    "message_id": 191282,
+    "task_start_message_id": 191281
+  },
+  {
+    "eligible": true,
+    "expected_capability": "Swap",
+    "rationale": "The assistant response is structured and provides information about the Swap panel, which is a key capability for the AI agent action.",
+    "session_id": "20260903_223152_5f4dbf5c",
+    "message_id": 198415,
+    "task_start_message_id": 198414
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant response indicates that the capability was invoked using the 'terminal' tool, which is expected for the task of running a script.",
+    "session_id": "cron_13aff6d1dafa_20260904_090013",
+    "message_id": 196680,
+    "task_start_message_id": 196679
+  },
+  {
+    "eligible": true,
+    "expected_capability": "mnemosyne_recall",
+    "rationale": "The assistant response indicates that the tool call 'mnemosyne_recall' was used correctly, as it was invoked in policy/permission bounds and its result was interpreted correctly.",
+    "session_id": "20260904_093858_15af2b",
+    "message_id": 196780,
+    "task_start_message_id": 196779
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant response shows a call to the 'terminal' tool, which is a common tool for interacting with a terminal environment, likely for running commands or executing scripts.",
+    "session_id": "20260904_154705_891e37",
+    "message_id": 197694,
+    "task_start_message_id": 197693
+  },
+  {
+    "eligible": true,
+    "expected_capability": "mnemosyne_recall",
+    "rationale": "The assistant response is a JSON object that labels the case according to the provided criteria.",
+    "session_id": "20260904_233644_536f227a",
+    "message_id": 198873,
+    "task_start_message_id": 198872
+  },
+  {
+    "eligible": true,
+    "expected_capability": "skill_view",
+    "rationale": "The assistant response is labeled based on the criteria provided, including the agent action, correct use, task outcome, and rationale.",
+    "session_id": "20260905_103107_f5cc7d11",
+    "message_id": 198960,
+    "task_start_message_id": 198959
+  },
+  {
+    "eligible": true,
+    "expected_capability": "ls -lt /tmp/mw-sweeper | head -20; echo ---; tail -40 /tmp/mw-sweeper/RUN-LOG.md; echo ---; grep -n \\\"Run 2 \u2014 2026-09-05\\\" /tmp/mw-sweeper/RUN-LOG.md",
+    "rationale": "The assistant content describes the execution of a series of commands to retrieve logs and check for a specific log entry, which is a valid and expected capability for the task of monitoring and analyzing the performance of an AI agent.",
+    "session_id": "cron_cf1731864088_20260905_115130",
+    "message_id": 199126,
+    "task_start_message_id": 199125
+  },
+  {
+    "eligible": true,
+    "expected_capability": "read_file",
+    "rationale": "The assistant called the 'read_file' function, which is expected to read a file from a specified path.",
+    "session_id": "20260905_123446_dde6b5",
+    "message_id": 199244,
+    "task_start_message_id": 199243
+  },
+  {
+    "eligible": true,
+    "expected_capability": "browser_exec",
+    "rationale": "The assistant content describes a function call to a browser_exec function, which is a common capability used for interacting with web pages.",
+    "session_id": "20260905_142845_66665912",
+    "message_id": 199712,
+    "task_start_message_id": 199711
+  },
+  {
+    "eligible": true,
+    "expected_capability": "read_file",
+    "rationale": "The assistant called the 'read_file' function, which is expected to read a file located at '/tmp/arbiter-prompt.txt'.",
+    "session_id": "20260905_164016_1c3500",
+    "message_id": 200167,
+    "task_start_message_id": 200166
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant message is a response to a tool call, indicating that the terminal command was executed successfully.",
+    "session_id": "20260905_170121_244e46",
+    "message_id": 200416,
+    "task_start_message_id": 200415
+  },
+  {
+    "eligible": true,
+    "expected_capability": "hermes-aux-autoheal",
+    "rationale": "The assistant response is labeled based on the criteria provided for the case.",
+    "session_id": "20260905_190029_1737bd1b",
+    "message_id": 201514,
+    "task_start_message_id": 201513
+  },
+  {
+    "eligible": true,
+    "expected_capability": "mnemosyne_task_progress",
+    "rationale": "The assistant response is labeled based on the provided tool calls and criteria.",
+    "session_id": "20260905_194239_507a4a34",
+    "message_id": 217633,
+    "task_start_message_id": 217632
+  },
+  {
+    "eligible": true,
+    "expected_capability": "bot-creation",
+    "rationale": "The assistant response indicates that the bot-creation skill was loaded and the Thinking Partner profile was created, which aligns with the expected capability of the task.",
+    "session_id": "20260905_212249_ddaabf4c",
+    "message_id": 202259,
+    "task_start_message_id": 202258
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The assistant response indicates that it is calling a terminal function, which is expected to be used for interacting with the system or environment.",
+    "session_id": "20260905_212846_ef7be7a4",
+    "message_id": 202311,
+    "task_start_message_id": 202307
+  },
+  {
+    "eligible": true,
+    "expected_capability": "HELLO_TEST",
+    "rationale": "The assistant response is labeled as 'HELLO_TEST', which is the expected capability for this case.",
+    "session_id": "20260905_214518_9a5ca3",
+    "message_id": 202408,
+    "task_start_message_id": 202407
+  },
+  {
+    "eligible": true,
+    "expected_capability": "DEFAULT_OK",
+    "rationale": "The assistant response is a simple default value 'DEFAULT_OK', which is correct and within the expected capability bounds.",
+    "session_id": "20260905_214727_fb5038",
+    "message_id": 202430,
+    "task_start_message_id": 202429
+  },
+  {
+    "eligible": true,
+    "expected_capability": "tool_describe",
+    "rationale": "The assistant response is labeled based on the provided criteria and the specific case details.",
+    "session_id": "20260906_144221_4f4e8a",
+    "message_id": 203622,
+    "task_start_message_id": 203621
+  },
+  {
+    "eligible": true,
+    "expected_capability": "skill_view",
+    "rationale": "The assistant response is labeled based on the criteria provided for the case.",
+    "session_id": "20260906_195139_9cb6dedf",
+    "message_id": 204692,
+    "task_start_message_id": 204687
+  },
+  {
+    "eligible": true,
+    "expected_capability": "web_extract",
+    "rationale": "The assistant response indicates that the web_extract tool was called, which is the expected capability for the task of extracting text from web pages.",
+    "session_id": "20260906_215704_cca631",
+    "message_id": 204946,
+    "task_start_message_id": 204945
+  },
+  {
+    "eligible": true,
+    "expected_capability": "vision_analyze",
+    "rationale": "The assistant response indicates that the 'vision_analyze' tool was called, which is the expected capability for the task.",
+    "session_id": "20260906_231953_17756046",
+    "message_id": 204958,
+    "task_start_message_id": 204957
+  },
+  {
+    "eligible": true,
+    "expected_capability": "terminal",
+    "rationale": "The response shows a series of tool calls related to the terminal command, which is a common tool used for executing commands in a terminal environment.",
+    "session_id": "cron_6b5f4a26a1e1_20260907_090106",
+    "message_id": 205169,
+    "task_start_message_id": 205168
+  },
+  {
+    "eligible": true,
+    "expected_capability": "last30days-upstream-sync",
+    "rationale": "The assistant response indicates that it will follow the last30days-upstream-sync protocol, which is a specific capability related to monitoring changes detected.",
+    "session_id": "cron_3a291aa26017_20260907_090128",
+    "message_id": 205179,
+    "task_start_message_id": 205174
+  },
+  {
+    "eligible": true,
+    "expected_capability": "AI agent capability discovery",
+    "rationale": "The case involves analyzing AI agent capabilities, which aligns with the research study on AI agent capability discovery.",
+    "session_id": "20260907_161549_ec1facc6",
+    "message_id": 205317,
+    "task_start_message_id": 205316
+  },
+  {
+    "eligible": true,
+    "expected_capability": "skill_view",
+    "rationale": "The assistant message is a response to a user message, indicating that the capability 'skill_view' was selected and used correctly.",
+    "session_id": "20260907_164312_fbf5cb40",
+    "message_id": 205421,
+    "task_start_message_id": 205418
+  }
+]

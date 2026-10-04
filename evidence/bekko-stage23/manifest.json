@@ -1,0 +1,24 @@
+{
+  "seed": 42,
+  "source": "stage23_labels.json (hand-labeled)",
+  "total": 33,
+  "train": 27,
+  "holdout": 6,
+  "holdout_ids": [
+    "191281",
+    "198872",
+    "200166",
+    "202429",
+    "205418",
+    "217632"
+  ],
+  "candidates": [
+    "used_correctly",
+    "not_selected",
+    "selected_wrong"
+  ],
+  "label_distribution": {
+    "used_correctly": 27,
+    "not_selected": 6
+  }
+}

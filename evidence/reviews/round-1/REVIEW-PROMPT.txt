@@ -1,0 +1,32 @@
+You are the independent, read-only reviewer of the exact local project plan in `/home/hermes-pi/projects/mnemosyne-operability/`. Do not edit files, access services/databases, contact external endpoints, run installation commands, or implement anything. Review plan fidelity AND usability: would following this plan safely and measurably reduce avoidable reminders, or is the proposal still too vague/badly scoped to execute? Do not trust authors' summary or bot opinions; inspect source files and verify cited paths and claim wording against their content. This is an ordinary directory, not a Git repository; do not assume Git history or external source truth.
+
+Exact file hashes under review:
+README.md d364b5a8eab62f0fefb796492fbefd6fd1971486d7f17ee42808f1a39d917adf
+PRAXIS.md e16ccfc4ae3f63b559ec731c6b0700ebdd68d748e21844ebc54b23dc6dc5ddf8
+METHODOLOGY.md 58defdbd8dd8ef71422471bc4d95edd5bb4b090a489dbe4ef2a3a6b2c1662a37
+ROADMAP.md a4e0492de4a4cdddd7c5bb2dc0ada55a4052a6049863a89bbae25006cf492492
+DECISIONS.md e04b1a6fd8151c24cea3aaf20f1bfe444972d94b8a47ce4e8a46f36118d284ea
+STATUS.md e2ee5e0bbb476b5dd01fd332bdb2cd38cef2de3e797f7ff3ca5d49e9d26a1dbc
+SOURCES.md ead1453784a41ae5729e531bd159842f30a62dc1926944d790dd3dfe3bacbadd
+EXECUTION-PROMPT.md cb8cbbfd21897e65f3e85fc0f8d57b714f195aa6bd0621a9ea04122acce56bbb
+scripts/verify.sh c8d251f417dd975daadf75d982e751a3c70df61eb471dabe05d18f18367e6852
+
+Background facts supplied only to orient (check local citations): Mnemosyne is a third-party upstream dependency. The local 2026-09-27 closeout records 40 tools, 73 memory injections (not “per turn”), and 0 provider load failures alongside operational mistakes. The October 1 wiki update says live package is managed-venv-installed and distinct from dev checkout. Current session search yielded 0 matches with sessions_searched=0, which is not proof of no records. RepoHunt found GBrain and agentmemory; GBrain RESOLVER.md and agentmemory Hermes integration README were read as study-only. Technical Cofounder suggested a context selector, 20 trials/+30 pp threshold, disabling prefetch, and a source path; these were explicitly rejected as unsupported. Vibe partner recommended bounded, privacy-minimized baseline case classification. No live operation is in scope.
+
+Review requirements:
+1. Return an exact verdict: `GO` or `NO-GO-WITH-CONDITIONS`; never a silent pass. If evidence/inspection is incomplete, state INCOMPLETE and why.
+2. Findings must use severity BLOCKER / MAJOR / MINOR, cite exact file and heading/line, explain a concrete failure consequence, and name a minimal correction.
+3. Explicitly review these dimensions:
+   - Problem/acceptance fit: does “avoidable reminder” have enough operational definition, and is no-build a valid outcome?
+   - Evidence integrity: exact sources, dates, denominator, historical vs current claims; unsupported hypotheses kept distinct from facts; candidate-repo claims correctly qualified.
+   - Evaluation usefulness: can R0/R1 produce a privacy-safe, reproducible corpus and trustworthy baseline, with label disagreements, actual session-search coverage, pre-registration, held-out case separation, guardrails, and no arbitrary thresholds?
+   - Safety/privacy: data minimization, retention/access, external API transmission, approval gates, live prefetch/runtime boundary, upstream updateability, and rollback.
+   - Roadmap usability/dependencies: is R0 truly highest-risk first and does each task produce an observable result? Is implementation gated behind independent review AND later authorization?
+   - Continuation prompt: is it self-contained, faithful, and unambiguous to a fresh session; does it name role, objective, closed gates, known bad claims, exact file paths, resume state and next task?
+   - Control script: assess what it proves and does NOT prove; flag misleading status/validation claims rather than over-crediting a structural marker check.
+   - Complexity: what can be deleted or combined without losing stated user requirements?
+4. Independently check at least 3 concrete failure modes/inversion cases and the second-order, adversarial, and reversibility risks. Specifically challenge: selection-metric leakage; a biased/retrospective case corpus; expanding context and sending private memory to providers; the reviewer/self-enforcer being skipped; and false negative from empty session search.
+5. Give top critical issues, medium issues, optional nits, one-paragraph verdict, and the single smallest safe next step. Distinguish observed fact from inference. Do not edit the plan, fix issues, or claim the verifier ran unless you execute it and observe the output.
+6. Include a content-independent whole-output verdict token exactly: `VERDICT: GO` or `VERDICT: NO-GO-WITH-CONDITIONS`.
+
+Budget: be decisive; prioritize falsifiable plan defects over wording polish. A partial review must include an explicit verdict and any unchecked dimensions; silence is not acceptance.

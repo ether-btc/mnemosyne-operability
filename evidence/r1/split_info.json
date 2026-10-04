@@ -1,0 +1,9 @@
+{
+  "total_sessions": 57,
+  "development_count": 45,
+  "evaluation_count": 12,
+  "split_method": "time_separated",
+  "split_ratio": 0.8,
+  "development_hash": "fa7863fd064ca96658357de7cbd38d36234eca8cd64b3a94d252916a70619127",
+  "evaluation_hash": "885c485eb3609768d0a8a5574992af76153ae5ea47fa7cd5a009c0f7026f30b4"
+}

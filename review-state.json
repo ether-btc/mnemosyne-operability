@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "review_history": [
+    {
+      "round": 1,
+      "reviewer": "reviewer",
+      "verdict": "NO-GO-WITH-CONDITIONS",
+      "result_path": "evidence/reviews/round-1/REVIEW-RESULT.txt",
+      "result_sha256": "ef4597ad0f1442589475f5d6ed021b125ef70f76edbe78448ef6586e0626739f",
+      "prompt_path": "evidence/reviews/round-1/REVIEW-PROMPT.txt",
+      "prompt_sha256": "ce1ea48c913142d3c732d8bed7bab52273f7b849ec96f8d0ad2fa4568f8bba52",
+      "reviewed_files": {
+        "README.md": "d364b5a8eab62f0fefb796492fbefd6fd1971486d7f17ee42808f1a39d917adf",
+        "PRAXIS.md": "e16ccfc4ae3f63b559ec731c6b0700ebdd68d748e21844ebc54b23dc6dc5ddf8",
+        "METHODOLOGY.md": "58defdbd8dd8ef71422471bc4d95edd5bb4b090a489dbe4ef2a3a6b2c1662a37",
+        "ROADMAP.md": "a4e0492de4a4cdddd7c5bb2dc0ada55a4052a6049863a89bbae25006cf492492",
+        "DECISIONS.md": "e04b1a6fd8151c24cea3aaf20f1bfe444972d94b8a47ce4e8a46f36118d284ea",
+        "STATUS.md": "e2ee5e0bbb476b5dd01fd332bdb2cd38cef2de3e797f7ff3ca5d49e9d26a1dbc",
+        "SOURCES.md": "ead1453784a41ae5729e531bd159842f30a62dc1926944d790dd3dfe3bacbadd",
+        "EXECUTION-PROMPT.md": "cb8cbbfd21897e65f3e85fc0f8d57b714f195aa6bd0621a9ea04122acce56bbb",
+        "scripts/verify.sh": "c8d251f417dd975daadf75d982e751a3c70df61eb471dabe05d18f18367e6852"
+      },
+      "findings": {
+        "F1": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F2": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F3": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F4": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F5": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F6": "Round-1 condition, addressed in current plan; round-2 re-review pending",
+        "F7": "Round-1 condition, addressed in current plan; round-2 re-review pending"
+      }
+    },
+    {
+      "round": 2,
+      "reviewer": "reviewer",
+      "verdict": "NO-GO-WITH-CONDITIONS",
+      "result_path": "evidence/reviews/round-2/REVIEW-RESULT.txt",
+      "result_sha256": "2f0178e371ddb94ee81e3923bc23259ab9076a79bea5332551f9875f1a2f8045",
+      "prompt_path": "evidence/reviews/round-2/REVIEW-PROMPT.txt",
+      "prompt_sha256": "8974b685c3f04368b1700add39b2620a048850a1be6faa46f0285235a8cf7246",
+      "reviewed_files": {
+        "README.md": "6a8a327d614affe892c19f65bb8f4739693ef85904bf1820f19cb829d39b9622",
+        "PRAXIS.md": "25ef567fbcaaaa9f7f0be70b03fac049a6a2d4468950f0c91e0f827c83bac330",
+        "METHODOLOGY.md": "b2d28496084f5781f3bbd124f722441e593644036d8fe0f3acd3cd3bd57f9d46",
+        "CODEBOOK.md": "ce39e5fee57c001039a8bc5f22651a7077c2d89b1610ed6a1bcbfb4d049c2eb6",
+        "ROADMAP.md": "01f38f821869e8aed07b35d9b9ef7838adf48e0d1e39c5e85f126ce5bd302b09",
+        "DECISIONS.md": "45d72508e80d5811d7a011dd2d790bc73c326ae331501fc27f818ed1531c7aad",
+        "STATUS.md": "33ac5a08131c86e81fb52cd2d3c33836957c123b40f9478b39b53c1745d19652",
+        "SOURCES.md": "a47176ad082290357d36589f4d3a5d5dc1271f7208c3ac0fc8f5535e283723ac",
+        "EXECUTION-PROMPT.md": "344056693bfd36228dbec5708df84256301cfe3f8ea55a0caf072ace8a417a66",
+        "scripts/verify.sh": "029ed6ae54660793acd6e459e2e798efeef0e8b4b12f21733827ef2decc8593a",
+        "scripts/test_verify.py": "e6f5bc8bf9eafc9e0b69b4f7b3bc0aeea41f46f5e4829820f648c44782d0d6f8"
+      },
+      "findings": {
+        "R2-M1": "Positive-control privacy path; closed as design contract in round-3",
+        "R2-M2": "Missing assistant-answer label stage; closed in round-3",
+        "R2-M3": "Phase/dependency mismatch; closed in round-3",
+        "R2-M4": "Reader/labeler isolation; closed as pre-content contract in round-3",
+        "R2-M5": "Malformed/contradictory verifier result; closed in round-3",
+        "R2-m6": "Metric terminology; closed in round-3",
+        "R2-m7": "Transcribed discovery records; accepted for current gate"
+      }
+    }
+  ],
+  "latest_review": {
+    "round": 3,
+    "reviewer": "reviewer",
+    "verdict": "GO",
+    "result_path": "evidence/reviews/round-3/REVIEW-RESULT.txt",
+    "result_sha256": "5d2bb5f868c7666bb01ffabf6116b02c955fa5f6ca2ce25f44aa527d17cff3f3",
+    "prompt_path": "evidence/reviews/round-3/REVIEW-PROMPT.txt",
+    "prompt_sha256": "d4edd960140f4ac6b079aef6df8858c0ee723ceed459035d7a1ad38f74501d5f",
+    "reviewed_files": {
+      "README.md": "55b728b566f334556318ef264f57378129a8f4abcbe73271204380f4dcf5580f",
+      "PRAXIS.md": "67ab34065ca1d37a0ad14f4e925c4026481f311167518a5cf893fa4ece9639b3",
+      "METHODOLOGY.md": "e5a5a9487fe00bfd005b21a60be02658b579735f68ea3cb38ee47115a120df31",
+      "CODEBOOK.md": "557d5cabfb5997ccca98d0180e7956e09acea96618b6618646d488e9cb1e027a",
+      "ROADMAP.md": "7981c0fe831f69e6375eb54d22db45106c5bbb323dd4905976d63fcfbcef099e",
+      "DECISIONS.md": "aa9dcad7f2c8fd14a2985597335a1b4db53b3067b3c26d178cbdb43db1e9e260",
+      "STATUS.md": "92423749762260c4f536aa3f4bb17eaff82eb42e5458991559d1ab1e7a219c56",
+      "SOURCES.md": "8fc4f672c9a967d6fd94571e153caef3b008467b9ed8b297ede4b5a2b62823ab",
+      "EXECUTION-PROMPT.md": "3344469e61c8a9e5c433b1c40b616a8a5d0ec10ce18d84e9da781227bdd4a572",
+      "scripts/verify.sh": "cadb8f3bf16f2903b66c5328e346727b273d3c417b409c50372252fe9b3b20e5",
+      "scripts/test_verify.py": "f3f931feef725a81a003ebae9d845ae65237daa0dcbea96e0bf02ac113a4e36b",
+      "evidence/search/session-search-output-contract-2026-10-04.md": "c3d2083bffdd4ea26009bac0bdfd1dae07e3675506dede189adf53e18ba18b9e",
+      "evidence/quality/local-tool-checks-2026-10-04.md": "cdad78ec6b16898737c573c0925ad3c8abb13d6f9a5b8953574d7cbb53f4e129",
+      "evidence/quality/bot-g0-v2-vibe-prompt.txt": "4c44fe9e3ba4f25cea31fa939cfc7b7057ade526fae0ca91774893ba39b432c5",
+      "evidence/quality/bot-g0-v2-vibe-review.txt": "99353188d3bedf267c8db16de521803cf82e27f0c1c11b1c345600c4027bbea3",
+      "evidence/quality/bot-g0-v2-cofounder-prompt.txt": "ddfd10cb7288f460ce8a7fb2757803612ba23dca50014c251408a0258fbe69f4",
+      "evidence/quality/bot-g0-v2-cofounder-review.txt": "a9520f78ceb36c6a81f02cb98f7dad19ad005fd3e21224bc10c537da73f8d9e8",
+      "evidence/quality/ocr-round3-g0-v2.md": "17486bc4d444b56b9c452d14d71b0b88a95c7a0fb7f8fb4f49d1d98fa42eee62"
+    },
+    "unresolved_findings": []
+  }
+}
