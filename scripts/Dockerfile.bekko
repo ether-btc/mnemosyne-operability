@@ -9,12 +9,13 @@ RUN pip install --no-cache-dir \
     && pip install --no-cache-dir \
     sentence-transformers==6.1.0 \
     transformers==5.17.0 \
-    numpy
+    numpy \
+    safetensors
 
 # Set environment
 ENV PYTHONPATH=/app/model
 ENV TRANSFORMERS_OFFLINE=1
 ENV HF_HUB_OFFLINE=1
 
-# Default: run inference test (model mounted at runtime)
-CMD ["python3", "-c", "from inference_v0 import BekkoSentenceTransformer; m = BekkoSentenceTransformer('/app/model', device='cpu', trust_remote_code=True); print('MODEL_LOADED')"]
+# Default: run inference test using custom loader
+CMD ["python3", "/app/model/load-bekko.py", "--model-path", "/app/model"]
