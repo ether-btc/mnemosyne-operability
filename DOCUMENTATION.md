@@ -373,3 +373,74 @@ podman builder prune -a -f
 
 **Resolution:** Custom loader script (`scripts/load-bekko.py`) that constructs the model from available files.
 
+---
+
+## Workflow Streamlining Scripts
+
+The following scripts implement the streamlining recommendations from the workflow analysis:
+
+### 1. `scripts/preflight.sh` — Pre-flight Checks
+
+Checks prerequisites before starting any workflow:
+
+```bash
+bash scripts/preflight.sh
+```
+
+**Checks:** Disk space, network, Podman, a16 SSH, local models, API keys, git config.
+
+**Exit 0:** All checks passed. **Exit 1:** One or more checks failed.
+
+### 2. `scripts/dispatch-review.sh` — Parallel Review Dispatch
+
+Runs all 3 review bots in parallel:
+
+```bash
+bash scripts/dispatch-review.sh /tmp/prompt.txt /tmp/review-output/
+```
+
+**Saves:** 5-6 dispatches per study (~15 minutes).
+
+### 3. `scripts/transfer-model.sh` — Binary-Safe Model Transfer
+
+Transfers models from a16 to Pi without corruption:
+
+```bash
+bash scripts/transfer-model.sh C:\Users\kranl\bekko\bekko-decider\output\model ./evidence/model
+```
+
+**Saves:** 2 attempts per transfer (~10 minutes).
+
+### 4. `scripts/test-local.sh` — Local Model Test
+
+Tests model locally before containerizing:
+
+```bash
+bash scripts/test-local.sh ./evidence/bekko-stage23-model
+```
+
+**Saves:** 2-3 attempts per deployment (~20 minutes).
+
+### 5. `scripts/batch-commit.sh` — Batch Git Commits
+
+Batches related changes into one commit:
+
+```bash
+bash scripts/batch-commit.sh "Add model training and deployment" scripts/ evidence/
+```
+
+**Saves:** 7 commits per study (~10 minutes).
+
+---
+
+## Streamlining Summary
+
+| Workflow | Before | After | Savings |
+|----------|--------|-------|---------|
+| Review dispatch | 9 dispatches | 3-4 | ~15 min |
+| Model training | 6+ attempts | 1 | ~20 min |
+| Model transfer | 3 attempts | 1 | ~10 min |
+| Container | 4 attempts | 1-2 | ~20 min |
+| Filing | 11 commits | 3-4 | ~10 min |
+| **Total** | **150+ calls** | **~80** | **~1 hour** |
+
